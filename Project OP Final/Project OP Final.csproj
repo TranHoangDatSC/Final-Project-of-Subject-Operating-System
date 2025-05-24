@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\BankerAlgorithm.cs" />
+    <Compile Include="Class\DiskScheduling.cs" />
     <Compile Include="FormBankerAlgorithm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +158,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\BankerIcon.png" />
+    <None Include="Resources\DiskSchedulingIcon.png" />
     <Content Include="Resources\mainpic.png" />
     <None Include="Resources\MainPicBG.jpg" />
     <None Include="Resources\opmainpic.jpg" />

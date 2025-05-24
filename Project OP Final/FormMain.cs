@@ -45,21 +45,25 @@ namespace Project_OP_Final
         private void btnBankerAlgorithm_Click(object sender, EventArgs e)
         {
             OpenFormChild(new FormBankerAlgorithm());
+            labelAlgorithms.Text = "Banker Algorithm";
         }
 
         private void btnCPUScheduling_Click(object sender, EventArgs e)
         {
             OpenFormChild(new FormCPUScheduling());
+            labelAlgorithms.Text = "CPU Scheduling Algorithm";
         }
 
         private void btnPageReplacement_Click(object sender, EventArgs e)
         {
             OpenFormChild(new FormPageReplacement());
+            labelAlgorithms.Text = "Page Replacement Algorithm";
         }
 
         private void btnDiskScheduling_Click(object sender, EventArgs e)
         {
             OpenFormChild(new FormDiskScheduling());
+            labelAlgorithms.Text = "Disk Scheduling Algorithm";
         }
 
         private void btnExit_Click(object sender, EventArgs e)

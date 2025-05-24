@@ -1,0 +1,9 @@
+echo # Final-Project-of-Subject-Operating-System  README.md
+git init
+git config --global user.email hoangdattran12@gmail.com
+git config --global user.name TranHoangDatSC
+git add .
+git commit -m first commit with full project source code
+git branch -M main
+git remote add origin httpsgithub.comTranHoangDatSCFinal-Project-of-Subject-Operating-System.git
+git push -u origin main
