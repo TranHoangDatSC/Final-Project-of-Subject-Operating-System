@@ -1,54 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\",
+  "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|c:\\users\\hoang\\source\\repos\\project op final\\project op final\\formbankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formbankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formdiskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formdiskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|c:\\users\\asus\\source\\repos\\final-project-of-subject-operating-system\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\project op final\\class\\pagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\pagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\project op final\\data\\pagereferencestring.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\data\\pagereferencestring.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formbankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\project op final\\formbankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formbankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\class\\bankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\bankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\project op final\\formpagereplacement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\data\\maxdemand.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\data\\maxdemand.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\data\\allocation.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\data\\allocation.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\data\\available.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\data\\available.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:Project OP Final\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\project op final\\formbankeralgorithm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formbankeralgorithm.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,147 +42,106 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormDiskScheduling.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormDiskScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormDiskScheduling.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormDiskScheduling.cs [Design]",
-              "RelativeToolTip": "Project OP Final\\FormDiskScheduling.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T15:57:52.469Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FormPageReplacement.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormPageReplacement.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormPageReplacement.cs [Design]",
-              "RelativeToolTip": "Project OP Final\\FormPageReplacement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T15:58:28.277Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "FormMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormMain.cs",
               "RelativeDocumentMoniker": "Project OP Final\\FormMain.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs [Design]",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormMain.cs [Design]",
               "RelativeToolTip": "Project OP Final\\FormMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T13:19:07.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FormBankerAlgorithm.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormBankerAlgorithm.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormBankerAlgorithm.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormBankerAlgorithm.cs",
-              "RelativeToolTip": "Project OP Final\\FormBankerAlgorithm.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAAwKAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T15:05:43.567Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-24T07:41:04.468Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormCPUScheduling.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormCPUScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormCPUScheduling.cs [Design]",
-              "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs [Design]",
+              "Title": "PageReferenceString.txt",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Data\\PageReferenceString.txt",
+              "RelativeDocumentMoniker": "Project OP Final\\Data\\PageReferenceString.txt",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Data\\PageReferenceString.txt",
+              "RelativeToolTip": "Project OP Final\\Data\\PageReferenceString.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-24T07:32:25.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PageReplacement.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\PageReplacement.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\Class\\PageReplacement.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\PageReplacement.cs",
+              "RelativeToolTip": "Project OP Final\\Class\\PageReplacement.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAIwBQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T15:57:41.674Z"
+              "WhenOpened": "2025-05-23T07:35:07.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormPageReplacement.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
+              "RelativeToolTip": "Project OP Final\\FormPageReplacement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:04:06.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormPageReplacement.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs [Design]",
+              "RelativeToolTip": "Project OP Final\\FormPageReplacement.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T15:58:28.277Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormPageReplacement.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.Designer.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.Designer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.Designer.cs",
+              "RelativeToolTip": "Project OP Final\\FormPageReplacement.Designer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwMsAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:55:59.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FormBankerAlgorithm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormBankerAlgorithm.Designer.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormBankerAlgorithm.Designer.cs",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormBankerAlgorithm.Designer.cs",
+              "RelativeToolTip": "Project OP Final\\FormBankerAlgorithm.Designer.cs",
+              "ViewState": "AgIAAKEBAAAAAAAAAAAAAGYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T15:49:04.895Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "FormBankerAlgorithm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormBankerAlgorithm.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormBankerAlgorithm.cs",
               "RelativeDocumentMoniker": "Project OP Final\\FormBankerAlgorithm.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormBankerAlgorithm.cs [Design]",
+              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormBankerAlgorithm.cs [Design]",
               "RelativeToolTip": "Project OP Final\\FormBankerAlgorithm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-21T09:03:44.017Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FormMain.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormMain.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs",
-              "RelativeToolTip": "Project OP Final\\FormMain.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T13:27:09.123Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Allocation.txt",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Data\\Allocation.txt",
-              "RelativeDocumentMoniker": "Project OP Final\\Data\\Allocation.txt",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Data\\Allocation.txt",
-              "RelativeToolTip": "Project OP Final\\Data\\Allocation.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-21T14:05:19.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BankerAlgorithm.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Class\\BankerAlgorithm.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\Class\\BankerAlgorithm.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Class\\BankerAlgorithm.cs",
-              "RelativeToolTip": "Project OP Final\\Class\\BankerAlgorithm.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAuwHcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T15:37:58.528Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MaxDemand.txt",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Data\\MaxDemand.txt",
-              "RelativeDocumentMoniker": "Project OP Final\\Data\\MaxDemand.txt",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Data\\MaxDemand.txt",
-              "RelativeToolTip": "Project OP Final\\Data\\MaxDemand.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-21T14:04:50.148Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Available.txt",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Data\\Available.txt",
-              "RelativeDocumentMoniker": "Project OP Final\\Data\\Available.txt",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Data\\Available.txt",
-              "RelativeToolTip": "Project OP Final\\Data\\Available.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-21T14:05:57.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Program.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\Program.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Program.cs",
-              "RelativeToolTip": "Project OP Final\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-21T09:00:48.353Z"
             }
           ]
         }
