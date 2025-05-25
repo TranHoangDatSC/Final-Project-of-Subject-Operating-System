@@ -51,11 +51,11 @@
             this.panelGanttChart = new System.Windows.Forms.Panel();
             this.labelChartSequence = new System.Windows.Forms.Label();
             this.labelStatus = new System.Windows.Forms.Label();
-            this.labelProcessBoard = new System.Windows.Forms.Label();
-            this.labelResultBoard = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AverageTAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AverageWT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelWithPriority = new System.Windows.Forms.Label();
+            this.comboBoxWithPriority = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResult)).BeginInit();
@@ -68,7 +68,7 @@
             this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
             this.pictureBox.Location = new System.Drawing.Point(12, 12);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(82, 72);
+            this.pictureBox.Size = new System.Drawing.Size(101, 95);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
@@ -78,25 +78,25 @@
             this.labelAlgorithm.AutoSize = true;
             this.labelAlgorithm.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelAlgorithm.ForeColor = System.Drawing.SystemColors.Info;
-            this.labelAlgorithm.Location = new System.Drawing.Point(117, 42);
+            this.labelAlgorithm.Location = new System.Drawing.Point(149, 25);
             this.labelAlgorithm.Name = "labelAlgorithm";
-            this.labelAlgorithm.Size = new System.Drawing.Size(132, 26);
+            this.labelAlgorithm.Size = new System.Drawing.Size(118, 26);
             this.labelAlgorithm.TabIndex = 1;
-            this.labelAlgorithm.Text = "Algorithm :";
+            this.labelAlgorithm.Text = "Algorithm";
             this.labelAlgorithm.Click += new System.EventHandler(this.labelAlgorithm_Click);
             // 
             // comboBox1
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "(FCFS) First Come First Serve",
             "(SJF) Shortest Job First",
             "(SRTF) Shortest Remaining Time First",
-            "(Round Robin)"});
-            this.comboBox1.Location = new System.Drawing.Point(271, 37);
+            "(RR) Round Robin"});
+            this.comboBox1.Location = new System.Drawing.Point(314, 22);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 31);
+            this.comboBox1.Size = new System.Drawing.Size(310, 29);
             this.comboBox1.TabIndex = 2;
             // 
             // dgvData
@@ -108,7 +108,7 @@
             this.Priority,
             this.BurstTime,
             this.ArrivingTime});
-            this.dgvData.Location = new System.Drawing.Point(68, 162);
+            this.dgvData.Location = new System.Drawing.Point(53, 173);
             this.dgvData.Name = "dgvData";
             this.dgvData.Size = new System.Drawing.Size(486, 297);
             this.dgvData.TabIndex = 3;
@@ -150,7 +150,7 @@
             this.ProcessID,
             this.TurnaroundTime,
             this.WaitingTime});
-            this.dgvResult.Location = new System.Drawing.Point(610, 162);
+            this.dgvResult.Location = new System.Drawing.Point(628, 173);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.Size = new System.Drawing.Size(470, 297);
             this.dgvResult.TabIndex = 4;
@@ -182,18 +182,19 @@
             this.labelNumOfProcess.AutoSize = true;
             this.labelNumOfProcess.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNumOfProcess.ForeColor = System.Drawing.SystemColors.Info;
-            this.labelNumOfProcess.Location = new System.Drawing.Point(75, 93);
+            this.labelNumOfProcess.Location = new System.Drawing.Point(106, 110);
             this.labelNumOfProcess.Name = "labelNumOfProcess";
-            this.labelNumOfProcess.Size = new System.Drawing.Size(191, 24);
+            this.labelNumOfProcess.Size = new System.Drawing.Size(179, 24);
             this.labelNumOfProcess.TabIndex = 5;
-            this.labelNumOfProcess.Text = "Number of Process :";
+            this.labelNumOfProcess.Text = "Number of Process";
             // 
             // processNumberBox
             // 
-            this.processNumberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.processNumberBox.Location = new System.Drawing.Point(271, 86);
+            this.processNumberBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.processNumberBox.Location = new System.Drawing.Point(314, 106);
+            this.processNumberBox.MaxLength = 10;
             this.processNumberBox.Name = "processNumberBox";
-            this.processNumberBox.Size = new System.Drawing.Size(123, 31);
+            this.processNumberBox.Size = new System.Drawing.Size(93, 29);
             this.processNumberBox.TabIndex = 6;
             // 
             // runBtn
@@ -202,7 +203,7 @@
             this.runBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.runBtn.ForeColor = System.Drawing.SystemColors.ControlText;
             this.runBtn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.runBtn.Location = new System.Drawing.Point(420, 42);
+            this.runBtn.Location = new System.Drawing.Point(488, 66);
             this.runBtn.Name = "runBtn";
             this.runBtn.Size = new System.Drawing.Size(101, 60);
             this.runBtn.TabIndex = 7;
@@ -213,7 +214,7 @@
             // 
             this.loadFileBtn.BackColor = System.Drawing.SystemColors.Info;
             this.loadFileBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loadFileBtn.Location = new System.Drawing.Point(590, 40);
+            this.loadFileBtn.Location = new System.Drawing.Point(658, 64);
             this.loadFileBtn.Name = "loadFileBtn";
             this.loadFileBtn.Size = new System.Drawing.Size(101, 62);
             this.loadFileBtn.TabIndex = 8;
@@ -224,7 +225,7 @@
             // 
             this.saveDataBtn.BackColor = System.Drawing.SystemColors.Info;
             this.saveDataBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveDataBtn.Location = new System.Drawing.Point(753, 39);
+            this.saveDataBtn.Location = new System.Drawing.Point(821, 63);
             this.saveDataBtn.Name = "saveDataBtn";
             this.saveDataBtn.Size = new System.Drawing.Size(101, 63);
             this.saveDataBtn.TabIndex = 9;
@@ -235,7 +236,7 @@
             // 
             this.resetBtn.BackColor = System.Drawing.SystemColors.Info;
             this.resetBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.resetBtn.Location = new System.Drawing.Point(908, 40);
+            this.resetBtn.Location = new System.Drawing.Point(976, 64);
             this.resetBtn.Name = "resetBtn";
             this.resetBtn.Size = new System.Drawing.Size(101, 62);
             this.resetBtn.TabIndex = 10;
@@ -285,28 +286,6 @@
             this.labelStatus.TabIndex = 13;
             this.labelStatus.Text = "Status";
             // 
-            // labelProcessBoard
-            // 
-            this.labelProcessBoard.AutoSize = true;
-            this.labelProcessBoard.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProcessBoard.ForeColor = System.Drawing.SystemColors.Info;
-            this.labelProcessBoard.Location = new System.Drawing.Point(226, 136);
-            this.labelProcessBoard.Name = "labelProcessBoard";
-            this.labelProcessBoard.Size = new System.Drawing.Size(130, 23);
-            this.labelProcessBoard.TabIndex = 13;
-            this.labelProcessBoard.Text = "Process Board";
-            // 
-            // labelResultBoard
-            // 
-            this.labelResultBoard.AutoSize = true;
-            this.labelResultBoard.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelResultBoard.ForeColor = System.Drawing.SystemColors.Info;
-            this.labelResultBoard.Location = new System.Drawing.Point(724, 136);
-            this.labelResultBoard.Name = "labelResultBoard";
-            this.labelResultBoard.Size = new System.Drawing.Size(120, 23);
-            this.labelResultBoard.TabIndex = 14;
-            this.labelResultBoard.Text = "Result Board";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Linen;
@@ -316,7 +295,7 @@
             this.AverageWT});
             this.dataGridView1.Location = new System.Drawing.Point(753, 507);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(334, 128);
+            this.dataGridView1.Size = new System.Drawing.Size(345, 128);
             this.dataGridView1.TabIndex = 15;
             // 
             // AverageTAT
@@ -333,16 +312,41 @@
             this.AverageWT.HeaderText = "Average WT";
             this.AverageWT.Name = "AverageWT";
             // 
+            // labelWithPriority
+            // 
+            this.labelWithPriority.AutoSize = true;
+            this.labelWithPriority.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWithPriority.ForeColor = System.Drawing.SystemColors.Info;
+            this.labelWithPriority.Location = new System.Drawing.Point(130, 67);
+            this.labelWithPriority.Name = "labelWithPriority";
+            this.labelWithPriority.Size = new System.Drawing.Size(152, 26);
+            this.labelWithPriority.TabIndex = 16;
+            this.labelWithPriority.Text = "With Priority";
+            this.labelWithPriority.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // comboBoxWithPriority
+            // 
+            this.comboBoxWithPriority.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.comboBoxWithPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxWithPriority.FormattingEnabled = true;
+            this.comboBoxWithPriority.Items.AddRange(new object[] {
+            "No",
+            "Yes"});
+            this.comboBoxWithPriority.Location = new System.Drawing.Point(419, 63);
+            this.comboBoxWithPriority.Name = "comboBoxWithPriority";
+            this.comboBoxWithPriority.Size = new System.Drawing.Size(93, 29);
+            this.comboBoxWithPriority.TabIndex = 17;
+            // 
             // FormCPUScheduling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.comboBoxWithPriority);
+            this.Controls.Add(this.labelWithPriority);
             this.Controls.Add(this.panelGanttChart);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.labelResultBoard);
-            this.Controls.Add(this.labelProcessBoard);
             this.Controls.Add(this.labelGanttChart);
             this.Controls.Add(this.resetBtn);
             this.Controls.Add(this.saveDataBtn);
@@ -391,13 +395,13 @@
         private System.Windows.Forms.Panel panelGanttChart;
         private System.Windows.Forms.Label labelChartSequence;
         private System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.Label labelProcessBoard;
-        private System.Windows.Forms.Label labelResultBoard;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProcessID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TurnaroundTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn WaitingTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn AverageTAT;
         private System.Windows.Forms.DataGridViewTextBoxColumn AverageWT;
+        private System.Windows.Forms.Label labelWithPriority;
+        private System.Windows.Forms.ComboBox comboBoxWithPriority;
     }
 }
