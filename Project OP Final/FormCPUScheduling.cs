@@ -16,5 +16,20 @@ namespace Project_OP_Final
         {
             InitializeComponent();
         }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void labelAlgorithm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvResult_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

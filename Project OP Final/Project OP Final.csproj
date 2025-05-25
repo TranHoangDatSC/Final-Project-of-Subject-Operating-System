@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\BankerAlgorithm.cs" />
+    <Compile Include="Class\CPUScheduling.cs" />
     <Compile Include="Class\DiskScheduling.cs" />
     <Compile Include="Class\PageReplacement.cs" />
     <Compile Include="FormBankerAlgorithm.cs">
@@ -167,6 +168,7 @@
     <Content Include="Data\PageReferenceString.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\cpu-icon.png" />
     <Content Include="Resources\mainpic.png" />
     <None Include="Resources\MainPicBG.jpg" />
     <None Include="Resources\opmainpic.jpg" />

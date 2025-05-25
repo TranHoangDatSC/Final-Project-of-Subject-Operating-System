@@ -55,18 +55,20 @@
             this.panel1.Controls.Add(this.labelAlgorithms);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
+            this.panel1.Location = new System.Drawing.Point(1, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1922, 75);
+            this.panel1.Size = new System.Drawing.Size(1373, 49);
             this.panel1.TabIndex = 0;
             // 
             // labelAlgorithms
             // 
             this.labelAlgorithms.AutoSize = true;
             this.labelAlgorithms.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlgorithms.Location = new System.Drawing.Point(638, 20);
+            this.labelAlgorithms.Location = new System.Drawing.Point(425, 13);
+            this.labelAlgorithms.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAlgorithms.Name = "labelAlgorithms";
-            this.labelAlgorithms.Size = new System.Drawing.Size(652, 41);
+            this.labelAlgorithms.Size = new System.Drawing.Size(427, 26);
             this.labelAlgorithms.TabIndex = 3;
             this.labelAlgorithms.Text = "OPERATING SYSTEM ALGORITHMS";
             // 
@@ -75,17 +77,19 @@
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = global::Project_OP_Final.Properties.Resources.icons8_menu_50;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(130, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(87, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 49);
+            this.pictureBox1.Size = new System.Drawing.Size(43, 32);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(321, 186);
+            this.panel2.Location = new System.Drawing.Point(214, 121);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1314, 662);
+            this.panel2.Size = new System.Drawing.Size(876, 430);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -97,9 +101,10 @@
             this.panel3.Controls.Add(this.btnCPUScheduling);
             this.panel3.Controls.Add(this.btnPageReplacement);
             this.panel3.Controls.Add(this.btnHome);
-            this.panel3.Location = new System.Drawing.Point(2, 77);
+            this.panel3.Location = new System.Drawing.Point(1, 50);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(324, 972);
+            this.panel3.Size = new System.Drawing.Size(216, 707);
             this.panel3.TabIndex = 2;
             // 
             // btnExit
@@ -109,10 +114,11 @@
             this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(10, 633);
+            this.btnExit.Location = new System.Drawing.Point(7, 411);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnExit.Size = new System.Drawing.Size(287, 83);
+            this.btnExit.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnExit.Size = new System.Drawing.Size(191, 54);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -125,10 +131,11 @@
             this.btnDiskScheduling.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDiskScheduling.Image = global::Project_OP_Final.Properties.Resources.icons8_disk_24;
             this.btnDiskScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDiskScheduling.Location = new System.Drawing.Point(10, 509);
+            this.btnDiskScheduling.Location = new System.Drawing.Point(7, 331);
+            this.btnDiskScheduling.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDiskScheduling.Name = "btnDiskScheduling";
-            this.btnDiskScheduling.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnDiskScheduling.Size = new System.Drawing.Size(287, 83);
+            this.btnDiskScheduling.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnDiskScheduling.Size = new System.Drawing.Size(191, 54);
             this.btnDiskScheduling.TabIndex = 4;
             this.btnDiskScheduling.Text = "       Disk Scheduling";
             this.btnDiskScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -142,10 +149,11 @@
             this.btnBankerAlgorithm.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBankerAlgorithm.Image = global::Project_OP_Final.Properties.Resources.icons8_bank_30;
             this.btnBankerAlgorithm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBankerAlgorithm.Location = new System.Drawing.Point(10, 142);
+            this.btnBankerAlgorithm.Location = new System.Drawing.Point(7, 92);
+            this.btnBankerAlgorithm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBankerAlgorithm.Name = "btnBankerAlgorithm";
-            this.btnBankerAlgorithm.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnBankerAlgorithm.Size = new System.Drawing.Size(287, 83);
+            this.btnBankerAlgorithm.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnBankerAlgorithm.Size = new System.Drawing.Size(191, 54);
             this.btnBankerAlgorithm.TabIndex = 3;
             this.btnBankerAlgorithm.Text = "       Banker Algorithm";
             this.btnBankerAlgorithm.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,10 +167,11 @@
             this.btnCPUScheduling.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCPUScheduling.Image = global::Project_OP_Final.Properties.Resources.icons8_cpu_30;
             this.btnCPUScheduling.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCPUScheduling.Location = new System.Drawing.Point(10, 257);
+            this.btnCPUScheduling.Location = new System.Drawing.Point(7, 167);
+            this.btnCPUScheduling.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCPUScheduling.Name = "btnCPUScheduling";
-            this.btnCPUScheduling.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnCPUScheduling.Size = new System.Drawing.Size(287, 83);
+            this.btnCPUScheduling.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnCPUScheduling.Size = new System.Drawing.Size(191, 54);
             this.btnCPUScheduling.TabIndex = 2;
             this.btnCPUScheduling.Text = "       CPU Scheduling";
             this.btnCPUScheduling.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -176,10 +185,11 @@
             this.btnPageReplacement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnPageReplacement.Image = global::Project_OP_Final.Properties.Resources.icons8_page_30;
             this.btnPageReplacement.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPageReplacement.Location = new System.Drawing.Point(10, 385);
+            this.btnPageReplacement.Location = new System.Drawing.Point(7, 250);
+            this.btnPageReplacement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPageReplacement.Name = "btnPageReplacement";
-            this.btnPageReplacement.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnPageReplacement.Size = new System.Drawing.Size(287, 83);
+            this.btnPageReplacement.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnPageReplacement.Size = new System.Drawing.Size(191, 54);
             this.btnPageReplacement.TabIndex = 1;
             this.btnPageReplacement.Text = "       Page Replacement";
             this.btnPageReplacement.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,10 +203,11 @@
             this.btnHome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnHome.Image = global::Project_OP_Final.Properties.Resources.icons8_home_26;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(10, 27);
+            this.btnHome.Location = new System.Drawing.Point(7, 18);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(287, 83);
+            this.btnHome.Padding = new System.Windows.Forms.Padding(17, 0, 0, 0);
+            this.btnHome.Size = new System.Drawing.Size(191, 54);
             this.btnHome.TabIndex = 0;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -205,9 +216,10 @@
             // MainPanel
             // 
             this.MainPanel.Controls.Add(this.pictureBox2);
-            this.MainPanel.Location = new System.Drawing.Point(326, 77);
+            this.MainPanel.Location = new System.Drawing.Point(217, 50);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1598, 972);
+            this.MainPanel.Size = new System.Drawing.Size(1159, 705);
             this.MainPanel.TabIndex = 3;
             // 
             // pictureBox2
@@ -216,22 +228,24 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::Project_OP_Final.Properties.Resources.MainPicBG;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1598, 972);
+            this.pictureBox2.Size = new System.Drawing.Size(1159, 705);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1924, 1050);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormMain";
             this.Text = "FormMain";
             this.panel1.ResumeLayout(false);
