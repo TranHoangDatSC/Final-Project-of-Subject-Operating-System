@@ -39,6 +39,7 @@
             this.cbProcessRequest = new System.Windows.Forms.ComboBox();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.flowPanelRequest = new System.Windows.Forms.FlowLayoutPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.labelStatus = new System.Windows.Forms.Label();
             this.nudProcesses = new System.Windows.Forms.NumericUpDown();
             this.nudResources = new System.Windows.Forms.NumericUpDown();
@@ -55,7 +56,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSaveFile = new System.Windows.Forms.Button();
             this.flowPanelRequest.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudProcesses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudResources)).BeginInit();
@@ -93,7 +94,7 @@
             // 
             this.btnLoad.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLoad.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.Location = new System.Drawing.Point(765, 24);
+            this.btnLoad.Location = new System.Drawing.Point(714, 24);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(218, 98);
             this.btnLoad.TabIndex = 7;
@@ -105,7 +106,7 @@
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(1308, 24);
+            this.btnReset.Location = new System.Drawing.Point(1379, 24);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(181, 98);
             this.btnReset.TabIndex = 8;
@@ -174,6 +175,13 @@
             this.flowPanelRequest.Name = "flowPanelRequest";
             this.flowPanelRequest.Size = new System.Drawing.Size(235, 376);
             this.flowPanelRequest.TabIndex = 20;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(3, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(232, 35);
+            this.textBox1.TabIndex = 0;
             // 
             // labelStatus
             // 
@@ -294,7 +302,7 @@
             // 
             this.btnLoadFromTxt.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLoadFromTxt.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadFromTxt.Location = new System.Drawing.Point(1037, 24);
+            this.btnLoadFromTxt.Location = new System.Drawing.Point(947, 24);
             this.btnLoadFromTxt.Name = "btnLoadFromTxt";
             this.btnLoadFromTxt.Size = new System.Drawing.Size(221, 98);
             this.btnLoadFromTxt.TabIndex = 30;
@@ -333,12 +341,17 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "RESULT:";
             // 
-            // textBox1
+            // btnSaveFile
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(232, 35);
-            this.textBox1.TabIndex = 0;
+            this.btnSaveFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSaveFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveFile.Location = new System.Drawing.Point(1183, 24);
+            this.btnSaveFile.Name = "btnSaveFile";
+            this.btnSaveFile.Size = new System.Drawing.Size(181, 98);
+            this.btnSaveFile.TabIndex = 34;
+            this.btnSaveFile.Text = "Save File";
+            this.btnSaveFile.UseVisualStyleBackColor = false;
+            this.btnSaveFile.Click += new System.EventHandler(this.btnSaveFile_Click);
             // 
             // FormBankerAlgorithm
             // 
@@ -346,6 +359,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
             this.ClientSize = new System.Drawing.Size(1581, 936);
+            this.Controls.Add(this.btnSaveFile);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -414,5 +428,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSaveFile;
     }
 }

@@ -202,7 +202,7 @@ namespace Project_OP_Final
 
             if (!File.Exists(fileName))
             {
-                MessageBox.Show($"File '{fileName}' not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"File '{fileName}' not found.\nExpected at: {fileName}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -214,7 +214,7 @@ namespace Project_OP_Final
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to read file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to read file:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -232,7 +232,15 @@ namespace Project_OP_Final
                 return;
             }
 
-            string fileName = $"{selectedAlgorithm}_DiskScheduling.txt";
+            string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
+
+            // Tạo thư mục nếu chưa tồn tại
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            string fileName = Path.Combine(folderPath, $"{selectedAlgorithm}_DiskScheduling.txt");
 
             try
             {
@@ -241,7 +249,7 @@ namespace Project_OP_Final
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to save file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Failed to save file:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

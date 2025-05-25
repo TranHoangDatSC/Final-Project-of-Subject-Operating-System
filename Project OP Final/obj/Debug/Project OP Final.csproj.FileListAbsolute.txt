@@ -1,3 +1,7 @@
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Allocation.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Available.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\FCFS_DiskScheduling.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\MaxDemand.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe.config
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.pdb
@@ -5,7 +9,10 @@ C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Componen
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.csproj.AssemblyReference.cache
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormBankerAlgorithm.resources
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormCPUScheduling.resources
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormDiskScheduling.resources
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormMain.resources
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormPageReplacement.resources
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.Properties.Resources.resources
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.csproj.GenerateResource.cache
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.csproj.CoreCompileInputs.cache
@@ -13,9 +20,4 @@ C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project 
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.exe
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.pdb
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.exe.config
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Allocation.txt
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Available.txt
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\MaxDemand.txt
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormCPUScheduling.resources
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormDiskScheduling.resources
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project_OP_Final.FormPageReplacement.resources
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\PageReferenceString.txt

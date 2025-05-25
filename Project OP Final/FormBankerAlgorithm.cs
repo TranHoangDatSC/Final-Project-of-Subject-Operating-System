@@ -367,5 +367,71 @@ namespace Project_OP_Final
             }
             return true;
         }
+
+        private void btnSaveFile_Click(object sender, EventArgs e)
+        {
+            if (!IsInputDataValid()) return;
+
+            try
+            {
+                string dataDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
+
+                // Tạo thư mục nếu chưa tồn tại
+                if (!Directory.Exists(dataDir))
+                    Directory.CreateDirectory(dataDir);
+
+                string maxFile = Path.Combine(dataDir, "MaxDemand.txt");
+                string allocFile = Path.Combine(dataDir, "Allocation.txt");
+                string availFile = Path.Combine(dataDir, "Available.txt");
+
+                int processCount = (int)nudProcesses.Value;
+                int resourceCount = (int)nudResources.Value;
+
+                // Save MaxDemand
+                using (StreamWriter writer = new StreamWriter(maxFile, false))
+                {
+                    for (int i = 0; i < processCount; i++)
+                    {
+                        List<string> values = new List<string>();
+                        for (int j = 0; j < resourceCount; j++)
+                        {
+                            values.Add(dgvMaxDemand.Rows[i].Cells[j].Value?.ToString() ?? "0");
+                        }
+                        writer.WriteLine(string.Join(" ", values));
+                    }
+                }
+
+                // Save Allocation
+                using (StreamWriter writer = new StreamWriter(allocFile, false))
+                {
+                    for (int i = 0; i < processCount; i++)
+                    {
+                        List<string> values = new List<string>();
+                        for (int j = 0; j < resourceCount; j++)
+                        {
+                            values.Add(dgvAllocation.Rows[i].Cells[j].Value?.ToString() ?? "0");
+                        }
+                        writer.WriteLine(string.Join(" ", values));
+                    }
+                }
+
+                // Save Available
+                using (StreamWriter writer = new StreamWriter(availFile, false))
+                {
+                    List<string> values = new List<string>();
+                    for (int j = 0; j < resourceCount; j++)
+                    {
+                        values.Add(dgvAvailable.Rows[0].Cells[j].Value?.ToString() ?? "0");
+                    }
+                    writer.WriteLine(string.Join(" ", values));
+                }
+
+                MessageBox.Show("✔ Data successfully saved to files.", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("❌ Error saving files:\n" + ex.Message, "Save Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
