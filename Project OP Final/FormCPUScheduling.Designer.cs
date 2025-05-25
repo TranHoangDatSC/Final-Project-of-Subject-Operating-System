@@ -38,6 +38,9 @@
             this.BurstTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ArrivingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvResult = new System.Windows.Forms.DataGridView();
+            this.ProcessID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TurnaroundTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WaitingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.labelNumOfProcess = new System.Windows.Forms.Label();
             this.processNumberBox = new System.Windows.Forms.TextBox();
             this.runBtn = new System.Windows.Forms.Button();
@@ -51,9 +54,6 @@
             this.labelProcessBoard = new System.Windows.Forms.Label();
             this.labelResultBoard = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ProcessID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TurnaroundTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WaitingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AverageTAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AverageWT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -65,7 +65,7 @@
             // 
             // pictureBox
             // 
-            this.pictureBox.Image = global::Project_OP_Final.Properties.Resources.cpu__2_;
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
             this.pictureBox.Location = new System.Drawing.Point(12, 12);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(82, 72);
@@ -108,7 +108,7 @@
             this.Priority,
             this.BurstTime,
             this.ArrivingTime});
-            this.dgvData.Location = new System.Drawing.Point(37, 162);
+            this.dgvData.Location = new System.Drawing.Point(68, 162);
             this.dgvData.Name = "dgvData";
             this.dgvData.Size = new System.Drawing.Size(486, 297);
             this.dgvData.TabIndex = 3;
@@ -150,11 +150,32 @@
             this.ProcessID,
             this.TurnaroundTime,
             this.WaitingTime});
-            this.dgvResult.Location = new System.Drawing.Point(539, 162);
+            this.dgvResult.Location = new System.Drawing.Point(610, 162);
             this.dgvResult.Name = "dgvResult";
             this.dgvResult.Size = new System.Drawing.Size(470, 297);
             this.dgvResult.TabIndex = 4;
             this.dgvResult.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvResult_CellContentClick);
+            // 
+            // ProcessID
+            // 
+            this.ProcessID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ProcessID.DataPropertyName = "ProcessID";
+            this.ProcessID.HeaderText = "ProcessID";
+            this.ProcessID.Name = "ProcessID";
+            // 
+            // TurnaroundTime
+            // 
+            this.TurnaroundTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TurnaroundTime.DataPropertyName = "TurnaroundTime";
+            this.TurnaroundTime.HeaderText = "Turn-around Time";
+            this.TurnaroundTime.Name = "TurnaroundTime";
+            // 
+            // WaitingTime
+            // 
+            this.WaitingTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.WaitingTime.DataPropertyName = "WaitingTime";
+            this.WaitingTime.HeaderText = "Waiting Time";
+            this.WaitingTime.Name = "WaitingTime";
             // 
             // labelNumOfProcess
             // 
@@ -239,7 +260,7 @@
             this.panelGanttChart.Controls.Add(this.labelStatus);
             this.panelGanttChart.Location = new System.Drawing.Point(18, 507);
             this.panelGanttChart.Name = "panelGanttChart";
-            this.panelGanttChart.Size = new System.Drawing.Size(698, 128);
+            this.panelGanttChart.Size = new System.Drawing.Size(777, 128);
             this.panelGanttChart.TabIndex = 12;
             // 
             // labelChartSequence
@@ -293,31 +314,10 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.AverageTAT,
             this.AverageWT});
-            this.dataGridView1.Location = new System.Drawing.Point(675, 507);
+            this.dataGridView1.Location = new System.Drawing.Point(753, 507);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(334, 128);
             this.dataGridView1.TabIndex = 15;
-            // 
-            // ProcessID
-            // 
-            this.ProcessID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProcessID.DataPropertyName = "ProcessID";
-            this.ProcessID.HeaderText = "ProcessID";
-            this.ProcessID.Name = "ProcessID";
-            // 
-            // TurnaroundTime
-            // 
-            this.TurnaroundTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TurnaroundTime.DataPropertyName = "TurnaroundTime";
-            this.TurnaroundTime.HeaderText = "Turn-around Time";
-            this.TurnaroundTime.Name = "TurnaroundTime";
-            // 
-            // WaitingTime
-            // 
-            this.WaitingTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WaitingTime.DataPropertyName = "WaitingTime";
-            this.WaitingTime.HeaderText = "Waiting Time";
-            this.WaitingTime.Name = "WaitingTime";
             // 
             // AverageTAT
             // 
@@ -338,7 +338,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1047, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panelGanttChart);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.labelResultBoard);

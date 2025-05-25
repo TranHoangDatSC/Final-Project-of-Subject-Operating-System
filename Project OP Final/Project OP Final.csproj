@@ -168,7 +168,7 @@
     <Content Include="Data\PageReferenceString.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\cpu-icon.png" />
+    <None Include="Resources\cpu-icon2.png" />
     <Content Include="Resources\mainpic.png" />
     <None Include="Resources\MainPicBG.jpg" />
     <None Include="Resources\opmainpic.jpg" />
