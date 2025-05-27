@@ -1,22 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\",
+  "WorkspaceRootPath": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\ms visual studio\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\microsoft visual studio 2022\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\class\\cpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\cpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\ms visual studio\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\microsoft visual studio 2022\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\ms visual studio\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\class\\pagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\pagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\microsoft visual studio 2022\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,53 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormCPUScheduling.cs [Design]",
-              "DocumentMoniker": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
-              "ToolTip": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs [Design]",
-              "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs [Design]",
+              "Title": "FormPageReplacement.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
+              "RelativeToolTip": "Project OP Final\\FormPageReplacement.cs",
+              "ViewState": "AgIAALsAAAAAzczMzMwuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T12:33:17.782Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PageReplacement.cs",
-              "DocumentMoniker": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\PageReplacement.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\Class\\PageReplacement.cs",
-              "ToolTip": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\PageReplacement.cs",
-              "RelativeToolTip": "Project OP Final\\Class\\PageReplacement.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T16:21:10.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FormCPUScheduling.cs",
-              "DocumentMoniker": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
-              "ToolTip": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
-              "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAgwCkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T16:09:14.866Z",
+              "WhenOpened": "2025-05-27T06:03:16.457Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CPUScheduling.cs",
-              "DocumentMoniker": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\Class\\CPUScheduling.cs",
-              "ToolTip": "D:\\MS Visual Studio\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
-              "RelativeToolTip": "Project OP Final\\Class\\CPUScheduling.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAJAAAAAAAAAA==",
+              "Title": "FormCPUScheduling.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
+              "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T15:10:29.507Z",
+              "WhenOpened": "2025-05-27T06:02:02.418Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormCPUScheduling.cs [Design]",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs [Design]",
+              "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-25T12:33:17.782Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
