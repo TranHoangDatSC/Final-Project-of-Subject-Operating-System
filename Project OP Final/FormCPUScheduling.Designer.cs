@@ -44,7 +44,7 @@
             this.lblNumOfProcess = new System.Windows.Forms.Label();
             this.txtProcessNumber = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
-            this.btnLoadFile = new System.Windows.Forms.Button();
+            this.btnLoadFromFile = new System.Windows.Forms.Button();
             this.btnSaveData = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.lblGanttChart = new System.Windows.Forms.Label();
@@ -55,8 +55,10 @@
             this.AverageTAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AverageWT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPriority = new System.Windows.Forms.Label();
-            this.radNotPriority = new System.Windows.Forms.RadioButton();
-            this.radNoPriority = new System.Windows.Forms.RadioButton();
+            this.radWithoutPriority = new System.Windows.Forms.RadioButton();
+            this.radWithPriority = new System.Windows.Forms.RadioButton();
+            this.txtQuantumTime = new System.Windows.Forms.TextBox();
+            this.lblQuantumTime = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridResult)).BeginInit();
@@ -79,7 +81,7 @@
             this.lblAlgorithm.AutoSize = true;
             this.lblAlgorithm.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlgorithm.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblAlgorithm.Location = new System.Drawing.Point(149, 25);
+            this.lblAlgorithm.Location = new System.Drawing.Point(155, 31);
             this.lblAlgorithm.Name = "lblAlgorithm";
             this.lblAlgorithm.Size = new System.Drawing.Size(118, 26);
             this.lblAlgorithm.TabIndex = 1;
@@ -89,15 +91,11 @@
             // 
             this.comboAlgorithm.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboAlgorithm.FormattingEnabled = true;
-            this.comboAlgorithm.Items.AddRange(new object[] {
-            "(FCFS) First Come First Serve",
-            "(SJF) Shortest Job First",
-            "(SRTF) Shortest Remaining Time First",
-            "(RR) Round Robin"});
-            this.comboAlgorithm.Location = new System.Drawing.Point(314, 22);
+            this.comboAlgorithm.Location = new System.Drawing.Point(320, 28);
             this.comboAlgorithm.Name = "comboAlgorithm";
             this.comboAlgorithm.Size = new System.Drawing.Size(310, 29);
             this.comboAlgorithm.TabIndex = 2;
+            this.comboAlgorithm.SelectedIndexChanged += new System.EventHandler(this.comboAlgorithm_SelectedIndexChanged);
             // 
             // gridData
             // 
@@ -108,7 +106,7 @@
             this.Priority,
             this.BurstTime,
             this.ArrivingTime});
-            this.gridData.Location = new System.Drawing.Point(53, 187);
+            this.gridData.Location = new System.Drawing.Point(43, 187);
             this.gridData.Name = "gridData";
             this.gridData.Size = new System.Drawing.Size(451, 283);
             this.gridData.TabIndex = 3;
@@ -149,7 +147,7 @@
             this.ProcessID,
             this.TurnaroundTime,
             this.WaitingTime});
-            this.gridResult.Location = new System.Drawing.Point(628, 187);
+            this.gridResult.Location = new System.Drawing.Point(500, 187);
             this.gridResult.Name = "gridResult";
             this.gridResult.Size = new System.Drawing.Size(435, 283);
             this.gridResult.TabIndex = 4;
@@ -178,21 +176,21 @@
             // lblNumOfProcess
             // 
             this.lblNumOfProcess.AutoSize = true;
-            this.lblNumOfProcess.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumOfProcess.Font = new System.Drawing.Font("Times New Roman", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumOfProcess.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblNumOfProcess.Location = new System.Drawing.Point(714, 23);
+            this.lblNumOfProcess.Location = new System.Drawing.Point(704, 26);
             this.lblNumOfProcess.Name = "lblNumOfProcess";
-            this.lblNumOfProcess.Size = new System.Drawing.Size(205, 26);
+            this.lblNumOfProcess.Size = new System.Drawing.Size(204, 25);
             this.lblNumOfProcess.TabIndex = 5;
             this.lblNumOfProcess.Text = "Number of Process";
             // 
             // txtProcessNumber
             // 
             this.txtProcessNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProcessNumber.Location = new System.Drawing.Point(922, 19);
+            this.txtProcessNumber.Location = new System.Drawing.Point(915, 25);
             this.txtProcessNumber.MaxLength = 10;
             this.txtProcessNumber.Name = "txtProcessNumber";
-            this.txtProcessNumber.Size = new System.Drawing.Size(93, 29);
+            this.txtProcessNumber.Size = new System.Drawing.Size(68, 29);
             this.txtProcessNumber.TabIndex = 6;
             this.txtProcessNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -202,29 +200,29 @@
             this.btnRun.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRun.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnRun.Location = new System.Drawing.Point(444, 82);
+            this.btnRun.Location = new System.Drawing.Point(971, 99);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(143, 81);
             this.btnRun.TabIndex = 7;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = false;
             // 
-            // btnLoadFile
+            // btnLoadFromFile
             // 
-            this.btnLoadFile.BackColor = System.Drawing.SystemColors.Info;
-            this.btnLoadFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadFile.Location = new System.Drawing.Point(616, 82);
-            this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(143, 83);
-            this.btnLoadFile.TabIndex = 8;
-            this.btnLoadFile.Text = "Load File";
-            this.btnLoadFile.UseVisualStyleBackColor = false;
+            this.btnLoadFromFile.BackColor = System.Drawing.SystemColors.Info;
+            this.btnLoadFromFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadFromFile.Location = new System.Drawing.Point(971, 200);
+            this.btnLoadFromFile.Name = "btnLoadFromFile";
+            this.btnLoadFromFile.Size = new System.Drawing.Size(143, 83);
+            this.btnLoadFromFile.TabIndex = 8;
+            this.btnLoadFromFile.Text = "Load From File";
+            this.btnLoadFromFile.UseVisualStyleBackColor = false;
             // 
             // btnSaveData
             // 
             this.btnSaveData.BackColor = System.Drawing.SystemColors.Info;
             this.btnSaveData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveData.Location = new System.Drawing.Point(793, 82);
+            this.btnSaveData.Location = new System.Drawing.Point(971, 306);
             this.btnSaveData.Name = "btnSaveData";
             this.btnSaveData.Size = new System.Drawing.Size(143, 81);
             this.btnSaveData.TabIndex = 9;
@@ -235,12 +233,13 @@
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.Info;
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(971, 80);
+            this.btnReset.Location = new System.Drawing.Point(971, 406);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(143, 83);
             this.btnReset.TabIndex = 10;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lblGanttChart
             // 
@@ -316,37 +315,58 @@
             this.lblPriority.AutoSize = true;
             this.lblPriority.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblPriority.Location = new System.Drawing.Point(153, 96);
+            this.lblPriority.Location = new System.Drawing.Point(652, 100);
             this.lblPriority.Name = "lblPriority";
             this.lblPriority.Size = new System.Drawing.Size(95, 26);
             this.lblPriority.TabIndex = 16;
             this.lblPriority.Text = "Priority";
             // 
-            // radNotPriority
+            // radWithoutPriority
             // 
-            this.radNotPriority.AutoSize = true;
-            this.radNotPriority.Checked = true;
-            this.radNotPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNotPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.radNotPriority.Location = new System.Drawing.Point(254, 81);
-            this.radNotPriority.Name = "radNotPriority";
-            this.radNotPriority.Size = new System.Drawing.Size(155, 26);
-            this.radNotPriority.TabIndex = 18;
-            this.radNotPriority.TabStop = true;
-            this.radNotPriority.Text = "Without Priority";
-            this.radNotPriority.UseVisualStyleBackColor = true;
+            this.radWithoutPriority.AutoSize = true;
+            this.radWithoutPriority.Checked = true;
+            this.radWithoutPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radWithoutPriority.ForeColor = System.Drawing.SystemColors.Info;
+            this.radWithoutPriority.Location = new System.Drawing.Point(753, 85);
+            this.radWithoutPriority.Name = "radWithoutPriority";
+            this.radWithoutPriority.Size = new System.Drawing.Size(155, 26);
+            this.radWithoutPriority.TabIndex = 18;
+            this.radWithoutPriority.TabStop = true;
+            this.radWithoutPriority.Text = "Without Priority";
+            this.radWithoutPriority.UseVisualStyleBackColor = true;
             // 
-            // radNoPriority
+            // radWithPriority
             // 
-            this.radNoPriority.AutoSize = true;
-            this.radNoPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radNoPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.radNoPriority.Location = new System.Drawing.Point(254, 127);
-            this.radNoPriority.Name = "radNoPriority";
-            this.radNoPriority.Size = new System.Drawing.Size(130, 26);
-            this.radNoPriority.TabIndex = 19;
-            this.radNoPriority.Text = "With Priority";
-            this.radNoPriority.UseVisualStyleBackColor = true;
+            this.radWithPriority.AutoSize = true;
+            this.radWithPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radWithPriority.ForeColor = System.Drawing.SystemColors.Info;
+            this.radWithPriority.Location = new System.Drawing.Point(753, 131);
+            this.radWithPriority.Name = "radWithPriority";
+            this.radWithPriority.Size = new System.Drawing.Size(130, 26);
+            this.radWithPriority.TabIndex = 19;
+            this.radWithPriority.Text = "With Priority";
+            this.radWithPriority.UseVisualStyleBackColor = true;
+            // 
+            // txtQuantumTime
+            // 
+            this.txtQuantumTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantumTime.Location = new System.Drawing.Point(365, 100);
+            this.txtQuantumTime.MaxLength = 10;
+            this.txtQuantumTime.Name = "txtQuantumTime";
+            this.txtQuantumTime.Size = new System.Drawing.Size(68, 29);
+            this.txtQuantumTime.TabIndex = 21;
+            this.txtQuantumTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblQuantumTime
+            // 
+            this.lblQuantumTime.AutoSize = true;
+            this.lblQuantumTime.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantumTime.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblQuantumTime.Location = new System.Drawing.Point(154, 101);
+            this.lblQuantumTime.Name = "lblQuantumTime";
+            this.lblQuantumTime.Size = new System.Drawing.Size(155, 24);
+            this.lblQuantumTime.TabIndex = 20;
+            this.lblQuantumTime.Text = "*Quantum Time";
             // 
             // FormCPUScheduling
             // 
@@ -354,15 +374,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.radNoPriority);
-            this.Controls.Add(this.radNotPriority);
+            this.Controls.Add(this.txtQuantumTime);
+            this.Controls.Add(this.lblQuantumTime);
+            this.Controls.Add(this.radWithPriority);
+            this.Controls.Add(this.radWithoutPriority);
             this.Controls.Add(this.lblPriority);
             this.Controls.Add(this.panelGanttChart);
             this.Controls.Add(this.gridAverage);
             this.Controls.Add(this.lblGanttChart);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSaveData);
-            this.Controls.Add(this.btnLoadFile);
+            this.Controls.Add(this.btnLoadFromFile);
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.txtProcessNumber);
             this.Controls.Add(this.lblNumOfProcess);
@@ -375,6 +397,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCPUScheduling";
             this.Text = "FormCPUScheduling";
+            this.Load += new System.EventHandler(this.FormCPUScheduling_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridResult)).EndInit();
@@ -400,7 +423,7 @@
         private System.Windows.Forms.Label lblNumOfProcess;
         private System.Windows.Forms.TextBox txtProcessNumber;
         private System.Windows.Forms.Button btnRun;
-        private System.Windows.Forms.Button btnLoadFile;
+        private System.Windows.Forms.Button btnLoadFromFile;
         private System.Windows.Forms.Button btnSaveData;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label lblGanttChart;
@@ -414,7 +437,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AverageTAT;
         private System.Windows.Forms.DataGridViewTextBoxColumn AverageWT;
         private System.Windows.Forms.Label lblPriority;
-        private System.Windows.Forms.RadioButton radNotPriority;
-        private System.Windows.Forms.RadioButton radNoPriority;
+        private System.Windows.Forms.RadioButton radWithoutPriority;
+        private System.Windows.Forms.RadioButton radWithPriority;
+        private System.Windows.Forms.TextBox txtQuantumTime;
+        private System.Windows.Forms.Label lblQuantumTime;
     }
 }
