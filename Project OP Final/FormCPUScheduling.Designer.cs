@@ -108,9 +108,9 @@
             this.Priority,
             this.BurstTime,
             this.ArrivingTime});
-            this.gridData.Location = new System.Drawing.Point(53, 173);
+            this.gridData.Location = new System.Drawing.Point(53, 187);
             this.gridData.Name = "gridData";
-            this.gridData.Size = new System.Drawing.Size(486, 297);
+            this.gridData.Size = new System.Drawing.Size(451, 283);
             this.gridData.TabIndex = 3;
             // 
             // Process
@@ -149,9 +149,9 @@
             this.ProcessID,
             this.TurnaroundTime,
             this.WaitingTime});
-            this.gridResult.Location = new System.Drawing.Point(628, 173);
+            this.gridResult.Location = new System.Drawing.Point(628, 187);
             this.gridResult.Name = "gridResult";
-            this.gridResult.Size = new System.Drawing.Size(470, 297);
+            this.gridResult.Size = new System.Drawing.Size(435, 283);
             this.gridResult.TabIndex = 4;
             // 
             // ProcessID
@@ -202,9 +202,9 @@
             this.btnRun.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRun.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnRun.Location = new System.Drawing.Point(488, 82);
+            this.btnRun.Location = new System.Drawing.Point(444, 82);
             this.btnRun.Name = "btnRun";
-            this.btnRun.Size = new System.Drawing.Size(101, 60);
+            this.btnRun.Size = new System.Drawing.Size(143, 81);
             this.btnRun.TabIndex = 7;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = false;
@@ -213,9 +213,9 @@
             // 
             this.btnLoadFile.BackColor = System.Drawing.SystemColors.Info;
             this.btnLoadFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadFile.Location = new System.Drawing.Point(658, 80);
+            this.btnLoadFile.Location = new System.Drawing.Point(616, 82);
             this.btnLoadFile.Name = "btnLoadFile";
-            this.btnLoadFile.Size = new System.Drawing.Size(101, 62);
+            this.btnLoadFile.Size = new System.Drawing.Size(143, 83);
             this.btnLoadFile.TabIndex = 8;
             this.btnLoadFile.Text = "Load File";
             this.btnLoadFile.UseVisualStyleBackColor = false;
@@ -224,9 +224,9 @@
             // 
             this.btnSaveData.BackColor = System.Drawing.SystemColors.Info;
             this.btnSaveData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveData.Location = new System.Drawing.Point(821, 79);
+            this.btnSaveData.Location = new System.Drawing.Point(793, 82);
             this.btnSaveData.Name = "btnSaveData";
-            this.btnSaveData.Size = new System.Drawing.Size(101, 63);
+            this.btnSaveData.Size = new System.Drawing.Size(143, 81);
             this.btnSaveData.TabIndex = 9;
             this.btnSaveData.Text = "Save Data";
             this.btnSaveData.UseVisualStyleBackColor = false;
@@ -235,9 +235,9 @@
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.Info;
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(976, 80);
+            this.btnReset.Location = new System.Drawing.Point(971, 80);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(101, 62);
+            this.btnReset.Size = new System.Drawing.Size(143, 83);
             this.btnReset.TabIndex = 10;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -332,6 +332,7 @@
             this.radNotPriority.Name = "radNotPriority";
             this.radNotPriority.Size = new System.Drawing.Size(155, 26);
             this.radNotPriority.TabIndex = 18;
+            this.radNotPriority.TabStop = true;
             this.radNotPriority.Text = "Without Priority";
             this.radNotPriority.UseVisualStyleBackColor = true;
             // 
