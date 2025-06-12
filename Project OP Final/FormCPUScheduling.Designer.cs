@@ -33,14 +33,7 @@
             this.lblAlgorithm = new System.Windows.Forms.Label();
             this.comboAlgorithm = new System.Windows.Forms.ComboBox();
             this.gridData = new System.Windows.Forms.DataGridView();
-            this.Process = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BurstTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ArrivingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gridResult = new System.Windows.Forms.DataGridView();
-            this.ProcessID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TurnaroundTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WaitingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNumOfProcess = new System.Windows.Forms.Label();
             this.txtProcessNumber = new System.Windows.Forms.TextBox();
             this.btnRun = new System.Windows.Forms.Button();
@@ -52,13 +45,12 @@
             this.lblChartSequence = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.gridAverage = new System.Windows.Forms.DataGridView();
-            this.AverageTAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AverageWT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPriority = new System.Windows.Forms.Label();
             this.radWithoutPriority = new System.Windows.Forms.RadioButton();
             this.radWithPriority = new System.Windows.Forms.RadioButton();
             this.txtQuantumTime = new System.Windows.Forms.TextBox();
             this.lblQuantumTime = new System.Windows.Forms.Label();
+            this.lblSecond = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridResult)).BeginInit();
@@ -101,77 +93,20 @@
             // 
             this.gridData.BackgroundColor = System.Drawing.Color.Linen;
             this.gridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Process,
-            this.Priority,
-            this.BurstTime,
-            this.ArrivingTime});
-            this.gridData.Location = new System.Drawing.Point(43, 187);
+            this.gridData.Location = new System.Drawing.Point(43, 173);
             this.gridData.Name = "gridData";
-            this.gridData.Size = new System.Drawing.Size(451, 283);
+            this.gridData.Size = new System.Drawing.Size(637, 283);
             this.gridData.TabIndex = 3;
-            // 
-            // Process
-            // 
-            this.Process.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Process.DataPropertyName = "Process";
-            this.Process.HeaderText = "Process";
-            this.Process.Name = "Process";
-            // 
-            // Priority
-            // 
-            this.Priority.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Priority.DataPropertyName = "Priority";
-            this.Priority.HeaderText = "Priority";
-            this.Priority.Name = "Priority";
-            // 
-            // BurstTime
-            // 
-            this.BurstTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BurstTime.DataPropertyName = "BurstTime";
-            this.BurstTime.HeaderText = "Burst Time";
-            this.BurstTime.Name = "BurstTime";
-            // 
-            // ArrivingTime
-            // 
-            this.ArrivingTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ArrivingTime.DataPropertyName = "ArrivingTime";
-            this.ArrivingTime.HeaderText = "Arriving Time";
-            this.ArrivingTime.Name = "ArrivingTime";
             // 
             // gridResult
             // 
             this.gridResult.BackgroundColor = System.Drawing.Color.Linen;
             this.gridResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridResult.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ProcessID,
-            this.TurnaroundTime,
-            this.WaitingTime});
-            this.gridResult.Location = new System.Drawing.Point(500, 187);
+            this.gridResult.Location = new System.Drawing.Point(637, 173);
             this.gridResult.Name = "gridResult";
-            this.gridResult.Size = new System.Drawing.Size(435, 283);
+            this.gridResult.ReadOnly = true;
+            this.gridResult.Size = new System.Drawing.Size(293, 283);
             this.gridResult.TabIndex = 4;
-            // 
-            // ProcessID
-            // 
-            this.ProcessID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ProcessID.DataPropertyName = "ProcessID";
-            this.ProcessID.HeaderText = "ProcessID";
-            this.ProcessID.Name = "ProcessID";
-            // 
-            // TurnaroundTime
-            // 
-            this.TurnaroundTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TurnaroundTime.DataPropertyName = "TurnaroundTime";
-            this.TurnaroundTime.HeaderText = "Turn-around Time";
-            this.TurnaroundTime.Name = "TurnaroundTime";
-            // 
-            // WaitingTime
-            // 
-            this.WaitingTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WaitingTime.DataPropertyName = "WaitingTime";
-            this.WaitingTime.HeaderText = "Waiting Time";
-            this.WaitingTime.Name = "WaitingTime";
             // 
             // lblNumOfProcess
             // 
@@ -200,7 +135,7 @@
             this.btnRun.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRun.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnRun.Location = new System.Drawing.Point(971, 99);
+            this.btnRun.Location = new System.Drawing.Point(974, 193);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(143, 81);
             this.btnRun.TabIndex = 7;
@@ -211,7 +146,7 @@
             // 
             this.btnLoadFromFile.BackColor = System.Drawing.SystemColors.Info;
             this.btnLoadFromFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadFromFile.Location = new System.Drawing.Point(971, 200);
+            this.btnLoadFromFile.Location = new System.Drawing.Point(974, 294);
             this.btnLoadFromFile.Name = "btnLoadFromFile";
             this.btnLoadFromFile.Size = new System.Drawing.Size(143, 83);
             this.btnLoadFromFile.TabIndex = 8;
@@ -222,7 +157,7 @@
             // 
             this.btnSaveData.BackColor = System.Drawing.SystemColors.Info;
             this.btnSaveData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveData.Location = new System.Drawing.Point(971, 306);
+            this.btnSaveData.Location = new System.Drawing.Point(974, 400);
             this.btnSaveData.Name = "btnSaveData";
             this.btnSaveData.Size = new System.Drawing.Size(143, 81);
             this.btnSaveData.TabIndex = 9;
@@ -233,7 +168,7 @@
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.Info;
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(971, 406);
+            this.btnReset.Location = new System.Drawing.Point(974, 500);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(143, 83);
             this.btnReset.TabIndex = 10;
@@ -259,7 +194,7 @@
             this.panelGanttChart.Controls.Add(this.lblStatus);
             this.panelGanttChart.Location = new System.Drawing.Point(18, 507);
             this.panelGanttChart.Name = "panelGanttChart";
-            this.panelGanttChart.Size = new System.Drawing.Size(777, 128);
+            this.panelGanttChart.Size = new System.Drawing.Size(662, 128);
             this.panelGanttChart.TabIndex = 12;
             // 
             // lblChartSequence
@@ -288,34 +223,18 @@
             // 
             this.gridAverage.BackgroundColor = System.Drawing.Color.Linen;
             this.gridAverage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAverage.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.AverageTAT,
-            this.AverageWT});
-            this.gridAverage.Location = new System.Drawing.Point(753, 507);
+            this.gridAverage.Location = new System.Drawing.Point(637, 507);
             this.gridAverage.Name = "gridAverage";
-            this.gridAverage.Size = new System.Drawing.Size(345, 128);
+            this.gridAverage.ReadOnly = true;
+            this.gridAverage.Size = new System.Drawing.Size(295, 128);
             this.gridAverage.TabIndex = 15;
-            // 
-            // AverageTAT
-            // 
-            this.AverageTAT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.AverageTAT.DataPropertyName = "AverageTAT";
-            this.AverageTAT.HeaderText = "Average TAT";
-            this.AverageTAT.Name = "AverageTAT";
-            // 
-            // AverageWT
-            // 
-            this.AverageWT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.AverageWT.DataPropertyName = "AverageWT";
-            this.AverageWT.HeaderText = "Average WT";
-            this.AverageWT.Name = "AverageWT";
             // 
             // lblPriority
             // 
             this.lblPriority.AutoSize = true;
             this.lblPriority.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblPriority.Location = new System.Drawing.Point(652, 100);
+            this.lblPriority.Location = new System.Drawing.Point(727, 100);
             this.lblPriority.Name = "lblPriority";
             this.lblPriority.Size = new System.Drawing.Size(95, 26);
             this.lblPriority.TabIndex = 16;
@@ -327,7 +246,7 @@
             this.radWithoutPriority.Checked = true;
             this.radWithoutPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radWithoutPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.radWithoutPriority.Location = new System.Drawing.Point(753, 85);
+            this.radWithoutPriority.Location = new System.Drawing.Point(828, 85);
             this.radWithoutPriority.Name = "radWithoutPriority";
             this.radWithoutPriority.Size = new System.Drawing.Size(155, 26);
             this.radWithoutPriority.TabIndex = 18;
@@ -340,7 +259,7 @@
             this.radWithPriority.AutoSize = true;
             this.radWithPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radWithPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.radWithPriority.Location = new System.Drawing.Point(753, 131);
+            this.radWithPriority.Location = new System.Drawing.Point(828, 131);
             this.radWithPriority.Name = "radWithPriority";
             this.radWithPriority.Size = new System.Drawing.Size(130, 26);
             this.radWithPriority.TabIndex = 19;
@@ -368,12 +287,25 @@
             this.lblQuantumTime.TabIndex = 20;
             this.lblQuantumTime.Text = "*Quantum Time";
             // 
+            // lblSecond
+            // 
+            this.lblSecond.AutoSize = true;
+            this.lblSecond.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSecond.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblSecond.Location = new System.Drawing.Point(439, 103);
+            this.lblSecond.Name = "lblSecond";
+            this.lblSecond.Size = new System.Drawing.Size(85, 24);
+            this.lblSecond.TabIndex = 22;
+            this.lblSecond.Text = "(second)";
+            // 
             // FormCPUScheduling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.gridData);
+            this.Controls.Add(this.lblSecond);
             this.Controls.Add(this.txtQuantumTime);
             this.Controls.Add(this.lblQuantumTime);
             this.Controls.Add(this.radWithPriority);
@@ -389,7 +321,6 @@
             this.Controls.Add(this.txtProcessNumber);
             this.Controls.Add(this.lblNumOfProcess);
             this.Controls.Add(this.gridResult);
-            this.Controls.Add(this.gridData);
             this.Controls.Add(this.comboAlgorithm);
             this.Controls.Add(this.lblAlgorithm);
             this.Controls.Add(this.pictureBox);
@@ -415,10 +346,6 @@
         private System.Windows.Forms.Label lblAlgorithm;
         private System.Windows.Forms.ComboBox comboAlgorithm;
         private System.Windows.Forms.DataGridView gridData;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Process;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BurstTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ArrivingTime;
         private System.Windows.Forms.DataGridView gridResult;
         private System.Windows.Forms.Label lblNumOfProcess;
         private System.Windows.Forms.TextBox txtProcessNumber;
@@ -431,15 +358,11 @@
         private System.Windows.Forms.Label lblChartSequence;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.DataGridView gridAverage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProcessID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TurnaroundTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WaitingTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AverageTAT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn AverageWT;
         private System.Windows.Forms.Label lblPriority;
         private System.Windows.Forms.RadioButton radWithoutPriority;
         private System.Windows.Forms.RadioButton radWithPriority;
         private System.Windows.Forms.TextBox txtQuantumTime;
         private System.Windows.Forms.Label lblQuantumTime;
+        private System.Windows.Forms.Label lblSecond;
     }
 }

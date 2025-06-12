@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\microsoft visual studio 2022\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\class\\pagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\pagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,26 +42,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FormCPUScheduling.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
               "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
               "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
               "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAmwHgAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAADwvzMAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T06:02:02.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "FormPageReplacement.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
               "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
               "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
               "RelativeToolTip": "Project OP Final\\FormPageReplacement.cs",
-              "ViewState": "AgIAALsAAAAAAAAAAAAQwM0AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAQwMwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T06:03:16.457Z",
               "EditorCaption": ""
@@ -80,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "FormPageReplacement.cs [Design]",
               "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormPageReplacement.cs",
               "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PageReplacement.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\PageReplacement.cs",
               "RelativeDocumentMoniker": "Project OP Final\\Class\\PageReplacement.cs",
@@ -100,8 +100,7 @@
               "RelativeToolTip": "Project OP Final\\Class\\PageReplacement.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAywBIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:29:50.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T06:29:50.042Z"
             }
           ]
         }
