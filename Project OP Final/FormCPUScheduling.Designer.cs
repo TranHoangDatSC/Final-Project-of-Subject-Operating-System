@@ -141,6 +141,7 @@
             this.btnRun.TabIndex = 7;
             this.btnRun.Text = "Run";
             this.btnRun.UseVisualStyleBackColor = false;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnLoadFromFile
             // 
@@ -200,8 +201,9 @@
             // lblChartSequence
             // 
             this.lblChartSequence.AutoSize = true;
-            this.lblChartSequence.BackColor = System.Drawing.Color.Linen;
+            this.lblChartSequence.BackColor = System.Drawing.Color.SandyBrown;
             this.lblChartSequence.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChartSequence.ForeColor = System.Drawing.SystemColors.Window;
             this.lblChartSequence.Location = new System.Drawing.Point(20, 72);
             this.lblChartSequence.Name = "lblChartSequence";
             this.lblChartSequence.Size = new System.Drawing.Size(175, 26);
@@ -211,8 +213,9 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.Linen;
+            this.lblStatus.BackColor = System.Drawing.Color.SandyBrown;
             this.lblStatus.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.SystemColors.Window;
             this.lblStatus.Location = new System.Drawing.Point(20, 21);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(75, 26);

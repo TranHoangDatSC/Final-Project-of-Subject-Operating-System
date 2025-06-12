@@ -4,10 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_OP_Final.Class
+namespace Project_OP_Final
 {
+    public class Process
+    {
+        public string ID { get; set; }
+        public int ArrivalTime { get; set; }
+        public int BurstTime { get; set; }
+        public int TurnaroundTime { get; set; }
+        public int WaitingTime { get; set; }
+        public int Priority { get; set; } // Only used for priority scheduling
+        public Process() { }
+
+    }
+
     internal class CPUScheduling
     {
+
+
+        /*-------------------------------------------------------------------------------
         public List<string> processIDs { get; set; }
         public List<int> burstTimes { get; set; }
         public List<int> arrivingTimes { get; set; }
@@ -123,5 +138,6 @@ namespace Project_OP_Final.Class
                 }
             }
         }
+        */
     }
 }
