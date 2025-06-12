@@ -79,6 +79,19 @@ namespace Project_OP_Final
 
         }
 
+        //Auto-generate ProcessID when a new row is added to gridData
+        private void gridData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            for (int i = 0; i < gridData.Rows.Count; i++)
+            {
+                var row = gridData.Rows[i];
+                if (!row.IsNewRow)
+                {
+                    row.Cells["ProcessID"].Value = "P" + (i + 1);
+                }
+            }
+        }
+
         //Start execution of the selected algorithm
         private void btnRun_Click(object sender, EventArgs e)
         {
@@ -104,14 +117,21 @@ namespace Project_OP_Final
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
 
+                //Vấn đề 1: Nếu user nhập vào string thay vì int cho AT/BT/PR thì chương trình sập
                 processes.Add(new Process
                 {
-                    ID = row.Cells[row.IndexOf(row.Cells["ProcessID"])].Value?.ToString() ?? "Unknown",
+                    ID = row.Cells["ProcessID"].Value ? .ToString(),
+                    ArrivalTime = Convert.ToInt32(row.Cells["ArrivalTime"].Value ?? MessageBox.Show("Điền thiếu arrival time. Hãy nhập lại.")),
+                    BurstTime = Convert.ToInt32(row.Cells["BurstTime"].Value ?? MessageBox.Show("Điền thiếu burst time. Hãy nhập lại.")),
+                    Priority = (radWithPriority.Checked || comboAlgorithm.SelectedItem.ToString() == "Priority Scheduling")
+                                ? Convert.ToInt32(row.Cells["Priority"].Value ?? MessageBox.Show("Điền thiếu priority level. Hãy nhập lại.")) : 0,
+                    //Initialize Turn-aroundTime and WaitingTime to 0
+                    TurnaroundTime = 0,
+                    WaitingTime = 0
                 });
             }
 
             //1.2: Populate gridResult
-            /*
              
             gridResult.Rows.Clear(); // Clear previous results
             foreach (var p in processes){
@@ -124,7 +144,6 @@ namespace Project_OP_Final
 
             gridAverage.Rows.Clear(); // Clear previous averages
             gridAverage.Rows.Add(avgTAT, avgWT);
-            */
 
         }
 
@@ -143,6 +162,8 @@ namespace Project_OP_Final
             }
             gridData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridData.AllowUserToAddRows = true;
+            gridData.Columns["ProcessID"].ReadOnly = true; // Process ID is auto-generated, so it should not be editable
+            gridData.Columns["ProcessID"].Visible = true;
 
             //gridResult
             gridResult.Columns.Add("TurnAroundTime","Turn-around Time");

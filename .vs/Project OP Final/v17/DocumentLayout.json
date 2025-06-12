@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\microsoft visual studio 2022\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\class\\cpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\class\\cpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\cpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -25,19 +25,6 @@
           "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CPUScheduling.cs",
-              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\Class\\CPUScheduling.cs",
-              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
-              "RelativeToolTip": "Project OP Final\\Class\\CPUScheduling.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-12T10:05:20.482Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
@@ -47,13 +34,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CPUScheduling.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\Class\\CPUScheduling.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
+              "RelativeToolTip": "Project OP Final\\Class\\CPUScheduling.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAA9wBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T10:05:20.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "FormCPUScheduling.cs",
               "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
               "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
               "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
               "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGYAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAQwIAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T06:02:02.418Z",
               "EditorCaption": ""

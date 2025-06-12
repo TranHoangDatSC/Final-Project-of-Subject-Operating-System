@@ -97,6 +97,7 @@
             this.gridData.Name = "gridData";
             this.gridData.Size = new System.Drawing.Size(637, 283);
             this.gridData.TabIndex = 3;
+            this.gridData.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridData_CellValueChanged);
             // 
             // gridResult
             // 
