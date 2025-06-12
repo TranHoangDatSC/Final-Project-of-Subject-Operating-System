@@ -198,7 +198,7 @@ namespace Project_OP_Final
             }
 
             string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data");
-            string fileName = Path.Combine(folderPath, $"{selectedAlgorithm}_DiskScheduling.txt");
+            string fileName = Path.Combine(folderPath, $"DiskScheduling.txt");
 
             if (!File.Exists(fileName))
             {

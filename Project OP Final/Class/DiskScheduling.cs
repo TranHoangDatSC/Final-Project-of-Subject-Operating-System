@@ -141,46 +141,28 @@ namespace Project_OP_Final.Class
         {
             steps = new List<(int, int, int)>();
             List<int> req = requests.ToList();
-            req.Add(head);
             req.Sort();
+
+            var left = req.Where(r => r < head).OrderByDescending(r => r).ToList();
+            var right = req.Where(r => r >= head).OrderBy(r => r).ToList(); // Lưu ý: r >= head để bao gồm nếu head là request
+
             int total = 0;
-            int index = req.IndexOf(head);
 
-            if (direction == Direction.Right)
+            // Luôn đi hết bên phải, rồi mới qua trái
+            foreach (int r in right)
             {
-                for (int i = index + 1; i < req.Count; i++)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
-
-                for (int i = index - 1; i >= 0; i--)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
+                int move = Math.Abs(head - r);
+                steps.Add((head, r, move));
+                total += move;
+                head = r;
             }
-            else // Left
-            {
-                for (int i = index - 1; i >= 0; i--)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
 
-                for (int i = index + 1; i < req.Count; i++)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
+            foreach (int r in left)
+            {
+                int move = Math.Abs(head - r);
+                steps.Add((head, r, move));
+                total += move;
+                head = r;
             }
 
             return total;

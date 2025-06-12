@@ -155,7 +155,7 @@
     <Content Include="Data\Available.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\FCFS_DiskScheduling.txt">
+    <Content Include="Data\DiskScheduling.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Data\MaxDemand.txt">

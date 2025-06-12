@@ -1,6 +1,5 @@
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Allocation.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Available.txt
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\FCFS_DiskScheduling.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\MaxDemand.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe.config
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe
@@ -21,3 +20,4 @@ C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project 
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.pdb
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.exe.config
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\PageReferenceString.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\DiskScheduling.txt
