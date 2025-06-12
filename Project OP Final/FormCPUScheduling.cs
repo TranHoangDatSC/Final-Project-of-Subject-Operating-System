@@ -12,6 +12,13 @@ using System.Windows.Documents;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
+/*
+ TODO: 
+    Sẽ như thế nào nếu sau khi form load(gridData có cột Priority), 
+        user chọn Run thuật toán với radWithoutPriority.Checked? 
+        -> Cần phải xóa cột Priority trong gridData sau khi nút Run được nhấn.
+ */
+
 namespace Project_OP_Final
 {
     public partial class FormCPUScheduling : Form
@@ -30,14 +37,11 @@ namespace Project_OP_Final
             comboAlgorithm.Items.Add("(SRTF) Shortest Remaining Time First");
             comboAlgorithm.Items.Add("(RR) Round Robin"); //Có Priority và Quantum Time
             comboAlgorithm.Items.Add("Priority Scheduling");
-                //Default algorithm
-            comboAlgorithm.SelectedItem = "(FCFS)First Come First Serve";
 
-            //About UI components
-            lblQuantumTime.Visible = false;
-            txtQuantumTime.Visible = false;
+            defaultUI();
+            radWithoutPriority.Enabled = true;
+            radWithPriority.Enabled = true;
 
-            //Set up grid view values
             setUpGridCollumns();
 
         }
@@ -46,12 +50,14 @@ namespace Project_OP_Final
         {
             //gridData
             gridData.Columns.Add("ProcessID", "Process ID");
-            gridData.Columns.Add("Priority", "Priority");
             gridData.Columns.Add("ArrivalTime", "Arrival Time");
             gridData.Columns.Add("BurstTime", "Burst Time");
+            if (radWithPriority.Checked || comboAlgorithm.SelectedItem.ToString() == "Priority Scheduling")
+            {
+                gridData.Columns.Add("Priority", "Priority");
+            }
             gridData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             gridData.AllowUserToAddRows = true;
-            gridData.Enabled = true;
 
             //gridResult
             gridResult.Columns.Add("TurnAroundTime","Turn-around Time");
@@ -89,10 +95,20 @@ namespace Project_OP_Final
 
         }
 
+
         //btnReset: Reset giao diện về mặc định
         private void btnReset_Click(object sender, EventArgs e)
         {
             // Giao diện mẫu: Default algorithm là FCFS
+            defaultUI();
+
+            // Xóa data grid view của bảng dữ liệu và kết quả
+            gridViewsReset();
+
+        }
+
+        private void defaultUI()
+        {
             comboAlgorithm.SelectedItem = "(FCFS)First Come First Serve";
             lblQuantumTime.Visible = false;
             txtQuantumTime.Visible = false;
@@ -101,15 +117,9 @@ namespace Project_OP_Final
 
             radWithoutPriority.Visible = true;
             radWithPriority.Visible = true;
-            radWithoutPriority.Checked = true; // Reset to default option
+            radWithPriority.Checked = true; // Reset to default option
 
             txtProcessNumber.Text = "0";
-
-            // Xóa data grid view của bảng dữ liệu và kết quả
-            gridViewsReset();
-            // Initialize grid views again
-            setUpGridCollumns();
-
         }
 
         private void gridViewsReset()
