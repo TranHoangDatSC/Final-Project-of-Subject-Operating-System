@@ -97,11 +97,11 @@ namespace Project_OP_Final
         {
             /*
             Workflow:
-            1. Get data from gridData
-            2. Validate the data
+            1. DONE: Get data from gridData
+            2. DONE: Validate the data
                 If valid, run the selected algorithm
                 If not valid, show error message
-            3. Perform calculation based on 
+            3. TODO: Perform calculation based on 
                 the selected algorithm
                 + with/ without priority radBtn checked
             4. Show the result in gridResult and gridAverage
@@ -110,35 +110,57 @@ namespace Project_OP_Final
             
             */
 
-            //Step 1: Get data from gridData
             List<Process> processes = new List<Process>();
-                //1.1: Get the data from gridData and store it in a list of Process objects
+
             foreach (DataGridViewRow row in gridData.Rows)
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
 
-                //Vấn đề 1: Nếu user nhập vào string thay vì int cho AT/BT/PR thì chương trình sập
-                processes.Add(new Process
+                string id = row.Cells["ProcessID"].Value.ToString();
+
+                if (!int.TryParse(row.Cells["ArrivalTime"].Value?.ToString(), out int arrivalTime))
                 {
-                    ID = row.Cells["ProcessID"].Value ? .ToString(),
-                    ArrivalTime = Convert.ToInt32(row.Cells["ArrivalTime"].Value ?? MessageBox.Show("Điền thiếu arrival time. Hãy nhập lại.")),
-                    BurstTime = Convert.ToInt32(row.Cells["BurstTime"].Value ?? MessageBox.Show("Điền thiếu burst time. Hãy nhập lại.")),
-                    Priority = (radWithPriority.Checked || comboAlgorithm.SelectedItem.ToString() == "Priority Scheduling")
-                                ? Convert.ToInt32(row.Cells["Priority"].Value ?? MessageBox.Show("Điền thiếu priority level. Hãy nhập lại.")) : 0,
-                    //Initialize Turn-aroundTime and WaitingTime to 0
-                    TurnaroundTime = 0,
-                    WaitingTime = 0
-                });
+                    MessageBox.Show($"Invalid Arrival Time Input for id {id}.\r\nTry Again.");
+                    return; // Exit if invalid input -> Avoid crashing 
+                }
+
+                if (!int.TryParse(row.Cells["BurstTime"].Value ? .ToString() ,out int burstTime))
+                {
+                    MessageBox.Show($"Invalid Burst Time Input for id {id}.\r\nTry Again.");
+                    return;
+                }
+
+                int priority = 0;
+                // If Priority column exists, get the priority value
+                if (radWithPriority.Checked || comboAlgorithm.SelectedItem.ToString() == "Priority Scheduling")
+                {
+                    if (!int.TryParse(row.Cells["Priority"].Value?.ToString(), out priority))
+                    {
+                        MessageBox.Show($"Invalid Priority Input for id {id}.\r\nTry Again.");
+                        return;
+                    }
+                }
+
+                    processes.Add(new Process
+                    {
+                        ID = id,
+                        ArrivalTime = arrivalTime,
+                        BurstTime = burstTime,
+                        Priority = priority,
+                        //Initialize TurnaroundTime and WaitingTime to 0
+                        TurnaroundTime = 0,
+                        WaitingTime = 0
+                    }
+                    );
             }
 
-            //1.2: Populate gridResult
-             
+            //Step 3: Perform the calculation based on the selected algorithm
+
             gridResult.Rows.Clear(); // Clear previous results
             foreach (var p in processes){
                 gridResult.Rows.Add(p.TurnaroundTime, p.WaitingTime);
             }
 
-            //1.3: Populate gridAverage
             double avgTAT = processes.Average(p => p.TurnaroundTime);
             double avgWT = processes.Average(p => p.WaitingTime);
 
