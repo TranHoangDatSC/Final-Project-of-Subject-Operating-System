@@ -153,6 +153,7 @@
             this.btnLoadFromFile.TabIndex = 8;
             this.btnLoadFromFile.Text = "Load From File";
             this.btnLoadFromFile.UseVisualStyleBackColor = false;
+            this.btnLoadFromFile.Click += new System.EventHandler(this.btnLoadFromFile_Click);
             // 
             // btnSaveData
             // 
@@ -164,6 +165,7 @@
             this.btnSaveData.TabIndex = 9;
             this.btnSaveData.Text = "Save Data";
             this.btnSaveData.UseVisualStyleBackColor = false;
+            this.btnSaveData.Click += new System.EventHandler(this.btnSaveData_Click);
             // 
             // btnReset
             // 

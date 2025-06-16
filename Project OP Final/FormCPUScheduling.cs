@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -114,7 +115,7 @@ namespace Project_OP_Final
             //Throw error: If no data in gridData
             if (gridData.Rows.Count == 0 || gridData.Rows[0].IsNewRow)
             {
-                //MessageBox.Show("⚠️ No data in the grid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("⚠️ No data in the grid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 informError();
                 return;
             }
@@ -188,6 +189,49 @@ namespace Project_OP_Final
 
         }
 
+        private void btnLoadFromFile_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string filePath = Path.Combine(Application.StartupPath, "Data", "Priority_CPU.txt");
+
+                // Read all lines
+                string[] lines = File.ReadAllLines(filePath);
+
+                // Clear existing rows
+                gridData.Rows.Clear();
+
+                int processCount = 0;
+
+                foreach (string line in lines)
+                {
+                    if (string.IsNullOrWhiteSpace(line)) continue;
+
+                    string[] parts = line.Split(' ');
+
+                    if (parts.Length >= 2) // At least Arrival and Burst time
+                    {
+                        int arrival = int.Parse(parts[0]);
+                        int burst = int.Parse(parts[1]);
+                        int prio = (parts.Length >= 3) ? int.Parse(parts[2]) : 0;
+
+                        gridData.Rows.Add($"P{processCount++}", arrival, burst, prio);
+                    }
+                }
+
+                inform("Load file successfully"); // Inform the user that the file has been loaded successfully
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading file: {ex.Message}");
+            }
+        }
+
+        private void btnSaveData_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //---------------Additional Methods---------------
 
@@ -255,6 +299,12 @@ namespace Project_OP_Final
             lblChartSequence.AutoSize = true;
         }
 
+        private void inform(string text)
+        {
+            lblChartSequence.Text = text;
+            lblChartSequence.AutoSize = true;
+        }
+
         private void ganttChartShow(List<Process> process)
         {
             // Clear previous gantt chart
@@ -266,14 +316,9 @@ namespace Project_OP_Final
 
         }
 
-        /*
-        private void btnLoadFromFile_Click(object sender, EventArgs e)
-        {
-            string filePath = Path.Combine(Application.StartupPath, "Data", "PageReferenceString.txt");
-            string content = File.ReadAllText(filePath);
-            txt_Page_reference_string.Text = content;
-        }
-        
+
+
+        /*        
         private void btn_SaveFile_Click(object sender, EventArgs e)
         {
             try

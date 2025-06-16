@@ -65,3 +65,4 @@ D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Su
 D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project .444B2ED4.Up2Date
 D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.exe
 D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.pdb
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\Priority_CPU.txt
