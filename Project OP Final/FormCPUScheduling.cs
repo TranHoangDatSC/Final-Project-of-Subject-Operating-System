@@ -167,7 +167,7 @@ namespace Project_OP_Final
             {
                 case "Priority Scheduling":
                     Process.PriorityRun(processes);
-                    //ganttChartShow();
+                    ganttChartShow(processes);
                     break;
                 default:
                     informError();
@@ -255,16 +255,16 @@ namespace Project_OP_Final
             lblChartSequence.AutoSize = true;
         }
 
-        //private void ganttChartShow()
-        //{
-        //    // Clear previous gantt chart
-        //    panelGanttChart.Controls.Clear();
-        //    panelGanttChart.Invalidate(); // Refresh the panel
+        private void ganttChartShow(List<Process> process)
+        {
+            // Clear previous gantt chart
+            panelGanttChart.Controls.Clear();
+            panelGanttChart.Invalidate(); // Refresh the panel
 
-        //    // Get the gantt chart sequence from the processes
-        //    string ganttSequence = Process.GetGanttChartSequence(); // Assuming this method exists in Process class
-        //    lblChartSequence.Text = ganttSequence; // Display the gantt chart sequence in the label
-        //}
+            // Display the gantt chart sequence from the processes
+            lblChartSequence.Text = string.Join(" -> ", process.Select(p => p.ID));
+
+        }
 
         /*
         private void btnLoadFromFile_Click(object sender, EventArgs e)

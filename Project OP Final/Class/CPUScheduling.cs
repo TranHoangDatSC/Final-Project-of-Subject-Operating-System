@@ -11,10 +11,13 @@ namespace Project_OP_Final
         public string ID { get; set; }
         public int ArrivalTime { get; set; }
         public int BurstTime { get; set; }
+        public int Priority { get; set; } // Only used for priority scheduling
+
         public int CompletionTime { get; set; }
+
         public int TurnaroundTime { get; set; }
         public int WaitingTime { get; set; }
-        public int Priority { get; set; } // Only used for priority scheduling
+
         public Process() { }
 
         public Process(string id, int arrivalTime, int burstTime, int priority = 0)
@@ -47,7 +50,6 @@ namespace Project_OP_Final
 
             3. Handle button Run
             */
-
             List<Process> completed = new List<Process>();
             List<Process> readyQueue = new List<Process>();
 
@@ -89,6 +91,10 @@ namespace Project_OP_Final
 
                 completed.Add(nextProcess); 
             }
+
+            //Update the original processes list with the completed processes
+            processes.Clear();
+            processes.AddRange(completed);
         }
 
         public void FCFSRun(List<Process> processes)
