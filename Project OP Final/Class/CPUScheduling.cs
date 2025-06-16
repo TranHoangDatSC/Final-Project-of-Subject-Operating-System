@@ -13,6 +13,7 @@ namespace Project_OP_Final
         public int BurstTime { get; set; }
         public int Priority { get; set; } // Only used for priority scheduling
 
+        public int StartTime { get; set; }
         public int CompletionTime { get; set; }
 
         public int TurnaroundTime { get; set; }
@@ -26,6 +27,7 @@ namespace Project_OP_Final
             ArrivalTime = arrivalTime;
             BurstTime = burstTime;
             Priority = priority;
+            StartTime = -1; // Initialized to -1, will be set during scheduling
             CompletionTime = 0; // Initialized to 0, will be set during scheduling
             TurnaroundTime = 0;
             WaitingTime = 0;
@@ -79,6 +81,9 @@ namespace Project_OP_Final
                 nextProcess = readyQueue.OrderBy(process => process.Priority)
                                          .ThenBy(process => process.ArrivalTime)
                                          .First();
+
+                if (nextProcess.StartTime == -1) nextProcess.StartTime = currentTime; //Only set ONCE
+                //Thuc thi roi thi cut khoi readyQueue
                 readyQueue.Remove(nextProcess);
 
                 //Calculate waiting time and turnaround time

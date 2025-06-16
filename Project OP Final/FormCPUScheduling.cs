@@ -155,6 +155,7 @@ namespace Project_OP_Final
                         ArrivalTime = arrivalTime,
                         BurstTime = burstTime,
                         Priority = priority,
+                        StartTime = -1,
                         CompletionTime = 0,
                         //Initialize TurnaroundTime and WaitingTime to 0
                         TurnaroundTime = 0,
@@ -186,6 +187,7 @@ namespace Project_OP_Final
 
             gridAverage.Rows.Clear(); // Clear previous averages
             gridAverage.Rows.Add(avgTAT, avgWT);
+            txtProcessNumber.Text = processes.Count.ToString(); // Update the process count
 
         }
 
@@ -215,7 +217,7 @@ namespace Project_OP_Final
                         int burst = int.Parse(parts[1]);
                         int prio = (parts.Length >= 3) ? int.Parse(parts[2]) : 0;
 
-                        gridData.Rows.Add($"P{processCount++}", arrival, burst, prio);
+                        gridData.Rows.Add($"P{++processCount}", arrival, burst, prio);
                     }
                 }
 
@@ -308,11 +310,21 @@ namespace Project_OP_Final
         private void ganttChartShow(List<Process> process)
         {
             // Clear previous gantt chart
-            panelGanttChart.Controls.Clear();
             panelGanttChart.Invalidate(); // Refresh the panel
+            lblChartSequence.Text = ""; // Clear the previous gantt chart sequence
 
             // Display the gantt chart sequence from the processes
-            lblChartSequence.Text = string.Join(" -> ", process.Select(p => p.ID));
+            //lblChartSequence.Text = string.Join(
+            //                                    " -> ", process.Select(p => p.ID),
+            //                                     "(", process.Select(p => p.StartTime),
+            //                                      " - ",
+            //                                      process.Select(p => p.CompletionTime), ")"
+            //                                    );
+            foreach (var p in process)
+            {
+                lblChartSequence.Text += $"{p.ID}({p.StartTime} - {p.CompletionTime}) -> ";
+            }
+            lblChartSequence.Text += "Finish";
 
         }
 
