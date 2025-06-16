@@ -102,10 +102,52 @@ namespace Project_OP_Final
             processes.AddRange(completed);
         }
 
-        public void FCFSRun(List<Process> processes)
+        public static void FCFSRun(List<Process> processes)
         {
-            // First Come First Serve scheduling logic
+            List<Process> completed = new List<Process>();
+            List<Process> readyQueue = new List<Process>();
 
+            int currentTime = 0;
+
+            while (completed.Count < processes.Count)
+            {
+                Process nextProcess = null;
+
+                //Add to readyQueue
+                foreach (var p in processes.Except(completed).ToList())
+                {
+                    if (p.ArrivalTime <= currentTime && !readyQueue.Contains(p))
+                    {
+                        readyQueue.Add(p);
+                    }
+                }
+                //Select next process from readyQueue
+                if (readyQueue.Count == 0)
+                {
+                    // If no process is in ready queue, increment currentTime
+                    currentTime++;
+                    continue;
+                }
+
+                nextProcess = readyQueue.OrderBy(p => p.ArrivalTime).First();
+                if (nextProcess.StartTime == -1) 
+                    nextProcess.StartTime = Math.Max(currentTime, nextProcess.ArrivalTime); // Set start time only ONCE
+
+                readyQueue.Remove(nextProcess);
+
+                //Calculate TAT, WT, CompletionTime, StartTime
+                nextProcess.CompletionTime = nextProcess.StartTime + nextProcess.BurstTime;
+                nextProcess.TurnaroundTime = nextProcess.CompletionTime - nextProcess.ArrivalTime;
+                nextProcess.WaitingTime = nextProcess.TurnaroundTime - nextProcess.BurstTime;
+
+                //Update current time to the completion time of THIS nextProcess
+                currentTime = nextProcess.CompletionTime;
+
+                completed.Add(nextProcess); //While loop handler
+            }
+            //Update the passed in processes list
+            processes.Clear();
+            processes.AddRange(completed);
         }
 
         public void SJFRun(List<Process> processes)

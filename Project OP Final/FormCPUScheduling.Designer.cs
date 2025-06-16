@@ -205,7 +205,7 @@
             this.lblChartSequence.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblChartSequence.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChartSequence.ForeColor = System.Drawing.Color.Green;
-            this.lblChartSequence.Location = new System.Drawing.Point(20, 50);
+            this.lblChartSequence.Location = new System.Drawing.Point(20, 19);
             this.lblChartSequence.Name = "lblChartSequence";
             this.lblChartSequence.Size = new System.Drawing.Size(191, 26);
             this.lblChartSequence.TabIndex = 14;

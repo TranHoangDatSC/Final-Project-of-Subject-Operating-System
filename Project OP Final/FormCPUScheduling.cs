@@ -1,9 +1,10 @@
 ﻿using System;
-using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Security.Cryptography;
@@ -65,7 +66,8 @@ namespace Project_OP_Final
             lblPriority.Visible = !isPriorityScheduling;
             radWithoutPriority.Visible = !isPriorityScheduling;
             radWithPriority.Visible = !isPriorityScheduling;
-
+            radWithoutPriority.Checked = !isPriorityScheduling; 
+            radWithPriority.Checked = isPriorityScheduling; 
         }
 
         //btnReset: Reset giao diện về mặc định
@@ -76,6 +78,7 @@ namespace Project_OP_Final
 
             // Xóa data grid view của bảng dữ liệu và kết quả
             gridViewsReset();
+            gridData.Columns["Priority"].Visible = true; // Hiển thị lại cột Priority nếu nó đã bị ẩn trước đó
 
         }
 
@@ -110,15 +113,21 @@ namespace Project_OP_Final
             
             */
 
-            List<Process> processes = new List<Process>();
-
             //Throw error: If no data in gridData
             if (gridData.Rows.Count == 0 || gridData.Rows[0].IsNewRow)
             {
                 MessageBox.Show("⚠️ No data in the grid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                informError();
+                informError("⚠️Build Failed - Please ensure all data is entered correctly.");
                 return;
             }
+            
+            if (radWithoutPriority.Checked)
+            {
+                //Hide the Priority column 
+                gridData.Columns["Priority"].Visible = false;
+            }
+
+            List<Process> processes = new List<Process>();
 
             foreach (DataGridViewRow row in gridData.Rows)
             {
@@ -165,15 +174,34 @@ namespace Project_OP_Final
             }
 
             //Step 3: Perform the calculation based on the selected algorithm
-            switch (comboAlgorithm.SelectedItem.ToString())
+            
+            //WITH priority algorithms
+            if (radWithoutPriority.Checked)
             {
-                case "Priority Scheduling":
-                    Process.PriorityRun(processes);
-                    ganttChartShow(processes);
-                    break;
-                default:
-                    informError();
-                    break;
+                switch (comboAlgorithm.SelectedItem.ToString())
+                {
+                    case "(FCFS)First Come First Serve":
+                        Process.FCFSRun(processes);
+                        ganttChartShow(processes);
+                        break;
+                    default:
+                        informError("⚠️Build Failed - Please ensure all data is entered correctly.");
+                        break;
+                }
+            }
+            //NOT with priority algorithms
+            else if (radWithPriority.Checked)
+            {
+                switch (comboAlgorithm.SelectedItem.ToString())
+                {
+                    case "Priority Scheduling":
+                        Process.PriorityRun(processes);
+                        ganttChartShow(processes);
+                        break;
+                    default:
+                        informError("⚠️Build Failed - Please ensure all data is entered correctly.");
+                        break;
+                }
             }
 
 
@@ -226,6 +254,7 @@ namespace Project_OP_Final
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading file: {ex.Message}");
+                informError("⚠️Failed to load file");
             }
         }
 
@@ -251,6 +280,7 @@ namespace Project_OP_Final
             gridData.AllowUserToAddRows = true;
             gridData.Columns["ProcessID"].ReadOnly = true; // Process ID is auto-generated, so it should not be editable
             gridData.Columns["ProcessID"].Visible = true;
+            gridData.Columns["Priority"].Visible = true;
 
             //gridResult
             gridResult.Columns.Add("TurnAroundTime","Turn-around Time");
@@ -280,9 +310,19 @@ namespace Project_OP_Final
 
             txtProcessNumber.Text = "0";
 
+            setUpPanel(); // Reset the panel for gantt chart/ information display
+
+        }
+
+        private void setUpPanel()
+        {
             lblChartSequence.Visible = true;
-            lblChartSequence.Text = "Select Algorithm of choice -> Load data -> press Run";
-            //lblChartSequence.AutoSize = true;
+            lblChartSequence.Text = "Step 1: Select Algorithm of choice\r\nStep 2: Load data\r\nStep 3: Press Run";
+            lblChartSequence.ForeColor = Color.Green;
+
+            lblChartSequence.AutoSize = true;
+            lblChartSequence.MaximumSize = new Size(panelGanttChart.Width, panelGanttChart.Height); // Set maximum width to the panel's width
+
 
         }
 
@@ -294,10 +334,10 @@ namespace Project_OP_Final
             gridAverage.Rows.Clear();
         }
 
-        private void informError()
+        private void informError(string text)
         {
             lblChartSequence.ForeColor = Color.Red;
-            lblChartSequence.Text = "⚠️Build Failed - Please ensure all data is entered correctly.";
+            lblChartSequence.Text = text;
             lblChartSequence.AutoSize = true;
         }
 
@@ -305,6 +345,7 @@ namespace Project_OP_Final
         {
             lblChartSequence.Text = text;
             lblChartSequence.AutoSize = true;
+            lblChartSequence.ForeColor = Color.Green;
         }
 
         private void ganttChartShow(List<Process> process)
@@ -314,12 +355,6 @@ namespace Project_OP_Final
             lblChartSequence.Text = ""; // Clear the previous gantt chart sequence
 
             // Display the gantt chart sequence from the processes
-            //lblChartSequence.Text = string.Join(
-            //                                    " -> ", process.Select(p => p.ID),
-            //                                     "(", process.Select(p => p.StartTime),
-            //                                      " - ",
-            //                                      process.Select(p => p.CompletionTime), ")"
-            //                                    );
             foreach (var p in process)
             {
                 lblChartSequence.Text += $"{p.ID}({p.StartTime} - {p.CompletionTime}) -> ";
