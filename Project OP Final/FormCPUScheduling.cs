@@ -32,17 +32,17 @@ namespace Project_OP_Final
         private void FormCPUScheduling_Load(object sender, EventArgs e)
         {
             //About combobox comboAlgorithm
-            comboAlgorithm.Items.Add("(FCFS)First Come First Serve"); //Có Priority
+            comboAlgorithm.Items.Add("Priority Scheduling");
+            comboAlgorithm.Items.Add("(FCFS)First Come First Serve"); 
             comboAlgorithm.Items.Add("(SJF) Shortest Job First");
             comboAlgorithm.Items.Add("(SRTF) Shortest Remaining Time First");
-            comboAlgorithm.Items.Add("(RR) Round Robin"); //Có Priority và Quantum Time
-            comboAlgorithm.Items.Add("Priority Scheduling");
+            comboAlgorithm.Items.Add("(RR) Round Robin"); //+ Quantum Time
 
             defaultUI();
             radWithoutPriority.Enabled = true;
             radWithPriority.Enabled = true;
 
-            setUpGridCollumns();
+            setUpGridCollumns(); //Vẫn còn cột Priority trong gridData nhưng sẽ được ẩn đi sau khi Run thuật toán không có Priority
 
         }
 
@@ -58,13 +58,12 @@ namespace Project_OP_Final
             txtQuantumTime.Visible = isRoundRobin;
             lblSecond.Visible = isRoundRobin;
 
-            // Only show the priority components for FCFS and Round Robin algorithm
-            bool isFCFS = selectedAlgorithm.Equals("(FCFS)First Come First Serve");
-            bool isRR = selectedAlgorithm.Equals("(RR) Round Robin");
-
-            lblPriority.Visible = isFCFS || isRR;
-            radWithoutPriority.Visible = isFCFS || isRR;
-            radWithPriority.Visible = isFCFS || isRR;
+            //Hide labels for Priority when the selected algorithm is "Priority Scheduling"
+            bool isPriorityScheduling = selectedAlgorithm.Equals("Priority Scheduling");
+            
+            lblPriority.Visible = !isPriorityScheduling;
+            radWithoutPriority.Visible = !isPriorityScheduling;
+            radWithPriority.Visible = !isPriorityScheduling;
 
         }
 
@@ -112,6 +111,14 @@ namespace Project_OP_Final
 
             List<Process> processes = new List<Process>();
 
+            //Throw error: If no data in gridData
+            if (gridData.Rows.Count == 0 || gridData.Rows[0].IsNewRow)
+            {
+                //MessageBox.Show("⚠️ No data in the grid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                informError();
+                return;
+            }
+
             foreach (DataGridViewRow row in gridData.Rows)
             {
                 if (row.IsNewRow) continue; // Skip the new row placeholder
@@ -147,6 +154,7 @@ namespace Project_OP_Final
                         ArrivalTime = arrivalTime,
                         BurstTime = burstTime,
                         Priority = priority,
+                        CompletionTime = 0,
                         //Initialize TurnaroundTime and WaitingTime to 0
                         TurnaroundTime = 0,
                         WaitingTime = 0
@@ -155,6 +163,17 @@ namespace Project_OP_Final
             }
 
             //Step 3: Perform the calculation based on the selected algorithm
+            switch (comboAlgorithm.SelectedItem.ToString())
+            {
+                case "Priority Scheduling":
+                    Process.PriorityRun(processes);
+                    //ganttChartShow();
+                    break;
+                default:
+                    informError();
+                    break;
+            }
+
 
             gridResult.Rows.Clear(); // Clear previous results
             foreach (var p in processes){
@@ -214,6 +233,11 @@ namespace Project_OP_Final
             radWithPriority.Checked = true; // Reset to default option
 
             txtProcessNumber.Text = "0";
+
+            lblChartSequence.Visible = true;
+            lblChartSequence.Text = "Select Algorithm of choice -> Load data -> press Run";
+            //lblChartSequence.AutoSize = true;
+
         }
 
         private void gridViewsReset()
@@ -224,6 +248,23 @@ namespace Project_OP_Final
             gridAverage.Rows.Clear();
         }
 
+        private void informError()
+        {
+            lblChartSequence.ForeColor = Color.Red;
+            lblChartSequence.Text = "⚠️Build Failed - Please ensure all data is entered correctly.";
+            lblChartSequence.AutoSize = true;
+        }
+
+        //private void ganttChartShow()
+        //{
+        //    // Clear previous gantt chart
+        //    panelGanttChart.Controls.Clear();
+        //    panelGanttChart.Invalidate(); // Refresh the panel
+
+        //    // Get the gantt chart sequence from the processes
+        //    string ganttSequence = Process.GetGanttChartSequence(); // Assuming this method exists in Process class
+        //    lblChartSequence.Text = ganttSequence; // Display the gantt chart sequence in the label
+        //}
 
         /*
         private void btnLoadFromFile_Click(object sender, EventArgs e)

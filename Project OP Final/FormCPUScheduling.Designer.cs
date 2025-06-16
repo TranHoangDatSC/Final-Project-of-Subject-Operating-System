@@ -43,7 +43,6 @@
             this.lblGanttChart = new System.Windows.Forms.Label();
             this.panelGanttChart = new System.Windows.Forms.Panel();
             this.lblChartSequence = new System.Windows.Forms.Label();
-            this.lblStatus = new System.Windows.Forms.Label();
             this.gridAverage = new System.Windows.Forms.DataGridView();
             this.lblPriority = new System.Windows.Forms.Label();
             this.radWithoutPriority = new System.Windows.Forms.RadioButton();
@@ -191,9 +190,8 @@
             // 
             // panelGanttChart
             // 
-            this.panelGanttChart.BackColor = System.Drawing.Color.SandyBrown;
+            this.panelGanttChart.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelGanttChart.Controls.Add(this.lblChartSequence);
-            this.panelGanttChart.Controls.Add(this.lblStatus);
             this.panelGanttChart.Location = new System.Drawing.Point(18, 507);
             this.panelGanttChart.Name = "panelGanttChart";
             this.panelGanttChart.Size = new System.Drawing.Size(662, 128);
@@ -202,26 +200,14 @@
             // lblChartSequence
             // 
             this.lblChartSequence.AutoSize = true;
-            this.lblChartSequence.BackColor = System.Drawing.Color.SandyBrown;
+            this.lblChartSequence.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblChartSequence.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChartSequence.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblChartSequence.Location = new System.Drawing.Point(20, 72);
+            this.lblChartSequence.ForeColor = System.Drawing.Color.Green;
+            this.lblChartSequence.Location = new System.Drawing.Point(20, 50);
             this.lblChartSequence.Name = "lblChartSequence";
-            this.lblChartSequence.Size = new System.Drawing.Size(175, 26);
+            this.lblChartSequence.Size = new System.Drawing.Size(191, 26);
             this.lblChartSequence.TabIndex = 14;
-            this.lblChartSequence.Text = "Chart Sequence";
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.SandyBrown;
-            this.lblStatus.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblStatus.Location = new System.Drawing.Point(20, 21);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(75, 26);
-            this.lblStatus.TabIndex = 13;
-            this.lblStatus.Text = "Status";
+            this.lblChartSequence.Text = "Ready to Execute";
             // 
             // gridAverage
             // 
@@ -298,9 +284,9 @@
             this.lblSecond.ForeColor = System.Drawing.SystemColors.Info;
             this.lblSecond.Location = new System.Drawing.Point(439, 103);
             this.lblSecond.Name = "lblSecond";
-            this.lblSecond.Size = new System.Drawing.Size(85, 24);
+            this.lblSecond.Size = new System.Drawing.Size(93, 24);
             this.lblSecond.TabIndex = 22;
-            this.lblSecond.Text = "(second)";
+            this.lblSecond.Text = "second(s)";
             // 
             // FormCPUScheduling
             // 
@@ -360,7 +346,6 @@
         private System.Windows.Forms.Label lblGanttChart;
         private System.Windows.Forms.Panel panelGanttChart;
         private System.Windows.Forms.Label lblChartSequence;
-        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.DataGridView gridAverage;
         private System.Windows.Forms.Label lblPriority;
         private System.Windows.Forms.RadioButton radWithoutPriority;
