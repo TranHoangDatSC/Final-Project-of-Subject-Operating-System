@@ -82,7 +82,8 @@ namespace Project_OP_Final
                                          .ThenBy(process => process.ArrivalTime)
                                          .First();
 
-                if (nextProcess.StartTime == -1) nextProcess.StartTime = currentTime; //Only set ONCE
+                if (nextProcess.StartTime == -1) 
+                    nextProcess.StartTime = Math.Max(nextProcess.ArrivalTime, currentTime); //Only set ONCE
                 //Thuc thi roi thi cut khoi readyQueue
                 readyQueue.Remove(nextProcess);
 
@@ -113,7 +114,7 @@ namespace Project_OP_Final
             {
                 Process nextProcess = null;
 
-                //Add to readyQueue
+                
                 foreach (var p in processes.Except(completed).ToList())
                 {
                     if (p.ArrivalTime <= currentTime && !readyQueue.Contains(p))
@@ -121,38 +122,84 @@ namespace Project_OP_Final
                         readyQueue.Add(p);
                     }
                 }
-                //Select next process from readyQueue
+                
                 if (readyQueue.Count == 0)
                 {
-                    // If no process is in ready queue, increment currentTime
                     currentTime++;
                     continue;
                 }
-
+                
                 nextProcess = readyQueue.OrderBy(p => p.ArrivalTime).First();
+
                 if (nextProcess.StartTime == -1) 
-                    nextProcess.StartTime = Math.Max(currentTime, nextProcess.ArrivalTime); // Set start time only ONCE
+                    nextProcess.StartTime = Math.Max(currentTime, nextProcess.ArrivalTime); 
 
                 readyQueue.Remove(nextProcess);
 
-                //Calculate TAT, WT, CompletionTime, StartTime
                 nextProcess.CompletionTime = nextProcess.StartTime + nextProcess.BurstTime;
                 nextProcess.TurnaroundTime = nextProcess.CompletionTime - nextProcess.ArrivalTime;
                 nextProcess.WaitingTime = nextProcess.TurnaroundTime - nextProcess.BurstTime;
 
-                //Update current time to the completion time of THIS nextProcess
                 currentTime = nextProcess.CompletionTime;
 
-                completed.Add(nextProcess); //While loop handler
+                completed.Add(nextProcess); 
             }
-            //Update the passed in processes list
             processes.Clear();
             processes.AddRange(completed);
         }
 
-        public void SJFRun(List<Process> processes)
+        public static void P_FCFSRun(List<Process> processes)
         {
-            // Shortest Job First scheduling logic
+            Console.WriteLine("Priority FCFS scheduling is not implemented yet.");
+        }
+
+        public static void SJFRun(List<Process> processes)
+        {
+            List<Process> completed = new List<Process>();
+
+            List<Process> readyQueue = new List<Process>();
+
+            int currentTime = 0;
+
+            while (completed.Count < processes.Count)
+            {
+                Process nextProcess = null;
+                
+                foreach (var p in processes.Except(completed).ToList())
+                {
+                    if (p.ArrivalTime <= currentTime && !readyQueue.Contains(p)) 
+                        readyQueue.Add(p); 
+                }
+
+                if (readyQueue.Count == 0)
+                {
+                    currentTime++;
+                    continue;
+                }
+
+                nextProcess = readyQueue.OrderBy(p => p.BurstTime)
+                                        .First();
+                readyQueue.Remove(nextProcess);
+
+                if (nextProcess.StartTime == -1)
+                    nextProcess.StartTime = Math.Max(currentTime, nextProcess.ArrivalTime);
+
+                nextProcess.CompletionTime = nextProcess.StartTime + nextProcess.BurstTime;
+                currentTime = nextProcess.CompletionTime;
+
+                nextProcess.TurnaroundTime = nextProcess.CompletionTime - nextProcess.ArrivalTime;
+                nextProcess.WaitingTime = nextProcess.TurnaroundTime - nextProcess.BurstTime;
+
+                completed.Add(nextProcess);
+            }
+
+            processes.Clear();
+            processes.AddRange(completed);
+        }
+
+        public static void P_SJFRun(List<Process> processes)
+        {
+            Console.WriteLine("Priority SJF scheduling is not implemented yet.");
         }
 
         public void SRTFRun(List<Process> processes)

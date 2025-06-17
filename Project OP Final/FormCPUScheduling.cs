@@ -184,19 +184,33 @@ namespace Project_OP_Final
                         Process.FCFSRun(processes);
                         ganttChartShow(processes);
                         break;
+                    case "(SJF) Shortest Job First":    
+                        Process.SJFRun(processes);
+                        ganttChartShow(processes);
+                        break;
                     default:
                         informError("⚠️Build Failed - Please ensure all data is entered correctly.");
                         break;
                 }
             }
             //NOT with priority algorithms
-            else if (radWithPriority.Checked)
+            if (radWithPriority.Checked)
             {
                 switch (comboAlgorithm.SelectedItem.ToString())
                 {
                     case "Priority Scheduling":
                         Process.PriorityRun(processes);
                         ganttChartShow(processes);
+                        break;
+                    case "(FCFS)First Come First Serve":
+                        //Process.P_FCFSRun(processes);
+                        //ganttChartShow(processes);
+                        informError("Priority FCFS scheduling is not implemented yet.");
+                        break;
+                    case "(SJF) Shortest Job First":
+                        //Process.P_SJFRun(processes);
+                        //ganttChartShow(processes);
+                        informError("Priority SJF scheduling is not implemented yet.");
                         break;
                     default:
                         informError("⚠️Build Failed - Please ensure all data is entered correctly.");
