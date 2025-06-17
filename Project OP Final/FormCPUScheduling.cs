@@ -101,17 +101,16 @@ namespace Project_OP_Final
         {
             /*
             Workflow:
-            1. DONE: Get data from gridData
-            2. DONE: Validate the data
+            1. Get data from gridData
+            2. Validate the data
                 If valid, run the selected algorithm
                 If not valid, show error message
-            3. TODO: Perform calculation based on 
+            3. Perform calculation based on 
                 the selected algorithm
                 + with/ without priority radBtn checked
             4. Show the result in gridResult and gridAverage
             5. (Test after the calculation reached correction) 
-            Perform string manipulation to print the gantt chart out into panelGanttChart
-            
+            Perform string manipulation to print the gantt chart out into panelGanttChart  
             */
 
             //Throw error: If no data in gridData
@@ -127,8 +126,19 @@ namespace Project_OP_Final
                 //Hide the Priority column 
                 gridData.Columns["Priority"].Visible = false;
             }
+            var quantumTime = 0;
+            if (comboAlgorithm.SelectedItem.ToString() == "(RR) Round Robin")
+            {
+                if (!int.TryParse(txtQuantumTime.Text, out quantumTime) || quantumTime <= 0)
+                {
+                    MessageBox.Show("Please enter a positive Quantum Time.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    informError("⚠️Invalid Quantum Time");
+                    return;
+                }
+            } 
 
             List<Process> processes = new List<Process>();
+            List<ProcessSnapshot> progress = new List<ProcessSnapshot>();
 
             foreach (DataGridViewRow row in gridData.Rows)
             {
@@ -174,8 +184,6 @@ namespace Project_OP_Final
                     }
                     );
             }
-
-            //Step 3: Perform the calculation based on the selected algorithm
             
             //NOT with priority algorithms
             if (radWithoutPriority.Checked)
@@ -191,7 +199,11 @@ namespace Project_OP_Final
                         ganttChartShow(processes);
                         break;
                     case "(SRTF) Shortest Remaining Time First":
-                        List<ProcessSnapshot>  progress  = Process.SRTFRun(processes);
+                        progress  = Process.SRTFRun(processes);
+                        ganttChartShow(progress);
+                        break;
+                    case "(RR) Round Robin":
+                        progress = Process.RRRun(processes, quantumTime);
                         ganttChartShow(progress);
                         break;
                     default:
@@ -217,7 +229,11 @@ namespace Project_OP_Final
                         ganttChartShow(processes);
                         break;
                     case "(SRTF) Shortest Remaining Time First":
-                        List<ProcessSnapshot> progress = Process.P_SRTFRun(processes);
+                        progress = Process.P_SRTFRun(processes);
+                        ganttChartShow(progress);
+                        break;
+                    case "(RR) Round Robin":
+                        progress = Process.P_RRRun(processes, quantumTime);
                         ganttChartShow(progress);
                         break;
                     default:
@@ -282,8 +298,81 @@ namespace Project_OP_Final
 
         private void btnSaveData_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (gridData.RowCount <= 1)
+                {
+                    MessageBox.Show("Please enter or load a file first.",
+                                    "Empty Content", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    informError("⚠️No content to save");
+                    return;
+                }
 
+                string content = $"{comboAlgorithm.SelectedItem} Implementation File\n\n";
+
+                content += "=== Dữ liệu ===\n";
+                foreach (DataGridViewRow row in gridData.Rows)
+                {
+                    if (row.IsNewRow || row.Cells.Count < 4) continue;
+
+                    if (row.Cells[0].Value == null || row.Cells[1].Value == null ||
+                        row.Cells[2].Value == null || row.Cells[3].Value == null) continue;
+
+                    content += $"Process ID: {row.Cells[0].Value}, " +
+                               $"Arrival Time: {row.Cells[1].Value}, " +
+                               $"Burst Time: {row.Cells[2].Value}, " +
+                               $"Priority: {row.Cells[3].Value}\n";
+                }
+
+
+                content += "\n=== Kết Quả ===\n";
+                for (int i = 0; i < gridResult.Rows.Count - 1; i++)
+                {
+                    var resultRow = gridResult.Rows[i];
+                    var dataRow = gridData.Rows[i];
+
+                    if (resultRow.Cells["TurnaroundTime"].Value == null || resultRow.Cells["WaitingTime"].Value == null)
+                        continue;
+
+                    content += $"Process ID: {dataRow.Cells["ProcessID"].Value}, " +
+                               $"Turn-around Time: {resultRow.Cells["TurnaroundTime"].Value}, " +
+                               $"Waiting Time: {resultRow.Cells["WaitingTime"].Value}\n";
+                }
+
+
+
+                content += "\n=== Trung Bình ===\n";
+                foreach (DataGridViewRow row in gridAverage.Rows)
+                {
+                    if (row.IsNewRow || row.Cells.Count < 2) continue;
+
+                    if (row.Cells[0].Value == null || row.Cells[1].Value == null) continue;
+
+                    content += $"\t\t\t{row.Cells[0].Value}:\t\t\t{row.Cells[1].Value}\n";
+                }
+
+
+                // Create file directory and save
+                string dataDir = Path.Combine(Application.StartupPath, "Data");
+                if (!Directory.Exists(dataDir))
+                {
+                    Directory.CreateDirectory(dataDir);
+                }
+
+                string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "CPU_FileSave.txt");
+                File.WriteAllText(filePath, content);
+
+
+                inform("File saved successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                informError("⚠️Failed to save file");
+            }
         }
+
 
 
         //---------------Additional Methods---------------
@@ -400,41 +489,5 @@ namespace Project_OP_Final
             }
             lblChartSequence.Text += $"{progress[progress.Count - 1].EndTime}";
         }
-
-
-
-        /*        
-        private void btn_SaveFile_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string content = txt_Page_reference_string.Text;
-
-                if (string.IsNullOrWhiteSpace(content))
-                {
-                    MessageBox.Show("⚠️ No content to save. Please enter or load a page reference string first.",
-                                    "Empty Content", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                string dataDir = Path.Combine(Application.StartupPath, "Data");
-                if (!Directory.Exists(dataDir))
-                {
-                    Directory.CreateDirectory(dataDir);
-                }
-
-                string filePath = Path.Combine(dataDir, "PageReferenceString.txt");
-                File.WriteAllText(filePath, content);
-
-                MessageBox.Show("✅ Page reference string saved successfully.",
-                                "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("❌ Failed to save the file:\n" + ex.Message,
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        */
     }
 }

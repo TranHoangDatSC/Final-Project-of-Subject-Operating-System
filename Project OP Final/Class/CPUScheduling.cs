@@ -84,7 +84,7 @@ namespace Project_OP_Final
                                          .ThenBy(process => process.ArrivalTime)
                                          .First();
 
-                if (nextProcess.StartTime == -1) 
+                if (nextProcess.RemainingTime == nextProcess.BurstTime) 
                     nextProcess.StartTime = Math.Max(nextProcess.ArrivalTime, currentTime); //Only set ONCE
                 //Thuc thi roi thi cut khoi readyQueue
                 readyQueue.Remove(nextProcess);
@@ -133,7 +133,7 @@ namespace Project_OP_Final
                 
                 nextProcess = readyQueue.OrderBy(p => p.ArrivalTime).First();
 
-                if (nextProcess.StartTime == -1) 
+                if (nextProcess.RemainingTime == nextProcess.BurstTime) 
                     nextProcess.StartTime = Math.Max(currentTime, nextProcess.ArrivalTime); 
 
                 readyQueue.Remove(nextProcess);
@@ -178,7 +178,7 @@ namespace Project_OP_Final
                                         .First();
                 readyQueue.Remove(nextProcess);
 
-                if (nextProcess.StartTime == -1)
+                if (nextProcess.RemainingTime == nextProcess.BurstTime)
                     nextProcess.StartTime = Math.Max(currentTime, nextProcess.ArrivalTime);
 
                 nextProcess.CompletionTime = nextProcess.StartTime + nextProcess.BurstTime;
@@ -223,7 +223,7 @@ namespace Project_OP_Final
                                         .First();
                 readyQueue.Remove(nextProcess);
 
-                if (nextProcess.StartTime == -1)
+                if (nextProcess.RemainingTime == nextProcess.BurstTime)
                     nextProcess.StartTime = Math.Max(currentTime, nextProcess.ArrivalTime);
 
                 nextProcess.CompletionTime = nextProcess.StartTime + nextProcess.BurstTime;
@@ -238,11 +238,6 @@ namespace Project_OP_Final
             processes.Clear();
             processes.AddRange(completed);
         }
-
-
- 
-    
-
 
     public class ProcessSnapshot
         {
@@ -308,8 +303,6 @@ namespace Project_OP_Final
             return progress;
         }
 
-
-
         public static List<ProcessSnapshot> P_SRTFRun(List<Process> processes)
         {
             List<Process> completed = new List<Process>();              // Finished processes
@@ -367,13 +360,164 @@ namespace Project_OP_Final
             return progress;
         }
 
-        public static void RRRun(List<Process> processes, int quantumTime)
+        public static List<ProcessSnapshot> RRRun(List<Process> processes, int quantumTime)
         {
-            // Round Robin scheduling logic
-        }
-    }
+            List<ProcessSnapshot> progress = new List<ProcessSnapshot>();
+            Queue<Process> readyQueue = new Queue<Process>();
+            int currentTime = 0;
+            int completedCount = 0;
 
-    internal class CPUScheduling
-    {
+            // Track arrival separately
+            var arrivalList = processes.OrderBy(p => p.ArrivalTime).ToList();
+            int arrivalIndex = 0;
+
+            while (completedCount < processes.Count)
+            {
+                // Enqueue new arrivals
+                while (arrivalIndex < arrivalList.Count && arrivalList[arrivalIndex].ArrivalTime <= currentTime)
+                {
+                    readyQueue.Enqueue(arrivalList[arrivalIndex]);
+                    arrivalIndex++;
+                }
+
+                if (readyQueue.Count == 0)
+                {
+                    progress.Add(new ProcessSnapshot { Id = "Idle", StartTime = currentTime, EndTime = currentTime + 1 });
+                    currentTime++;
+                    continue;
+                }
+
+                var process = readyQueue.Dequeue();
+
+                // Record first start time
+                if (process.RemainingTime == process.BurstTime)
+                    process.StartTime = currentTime;
+
+                /*
+                 Cases: 
+                      1. nextProcess.RemainingTime > quantumTime => EndTime = currentTime + quantumTime
+                      2. nextProcess.RemainingTime = quantumTime => EndTime = currentTime + quantumTime ->END
+                      3. nextProcess.RemainingTime < quantumTime => EndTime = currentTime + nextProcess.RemainingTime ->END
+                */
+                int executionTime = Math.Min(quantumTime, process.RemainingTime);
+
+                progress.Add(new ProcessSnapshot
+                {
+                    Id = process.ID,
+                    StartTime = currentTime,
+                    EndTime = currentTime + executionTime
+                });
+
+                currentTime += executionTime;
+                process.RemainingTime -= executionTime;
+
+                // Add any new arrivals that happened during this process's execution
+                while (arrivalIndex < arrivalList.Count && arrivalList[arrivalIndex].ArrivalTime <= currentTime)
+                {
+                    readyQueue.Enqueue(arrivalList[arrivalIndex]);
+                    arrivalIndex++;
+                }
+
+                if (process.RemainingTime == 0)
+                {
+                    process.CompletionTime = currentTime;
+                    process.TurnaroundTime = process.CompletionTime - process.ArrivalTime;
+                    process.WaitingTime = process.TurnaroundTime - process.BurstTime;
+                    completedCount++;
+                }
+                else
+                {
+                    // Not done, requeue
+                    readyQueue.Enqueue(process);
+                }
+            }
+
+            return progress;
+        }
+
+
+        public static List<ProcessSnapshot> P_RRRun(List<Process> processes, int quantumTime)
+        {
+            List<ProcessSnapshot> progress = new List<ProcessSnapshot>();
+            List<Process> readyQueue = new List<Process>();
+            int currentTime = 0;
+            int completedCount = 0;
+            int arrivalIndex = 0;
+
+            var arrivalList = processes.OrderBy(p => p.ArrivalTime).ToList();
+
+            Process current = null;
+            int currentQuantumUsed = 0;
+
+            while (completedCount < processes.Count)
+            {
+                // Add newly arrived processes to the ready queue
+                while (arrivalIndex < arrivalList.Count && arrivalList[arrivalIndex].ArrivalTime <= currentTime)
+                {
+                    readyQueue.Add(arrivalList[arrivalIndex]);
+                    arrivalIndex++;
+                }
+
+                // Preemption: check if current should stop due to higher-priority arrival
+                if (current != null)
+                {
+                    var higherPriority = readyQueue.Where(p => p.Priority < current.Priority).ToList();
+                    if (higherPriority.Count > 0)
+                    {
+                        readyQueue.Add(current); // Preempt and requeue
+                        current = null;
+                        currentQuantumUsed = 0;
+                    }
+                }
+
+                if (current == null)
+                {
+                    if (readyQueue.Count == 0)
+                    {
+                        progress.Add(new ProcessSnapshot { Id = "Idle", StartTime = currentTime, EndTime = currentTime + 1 });
+                        currentTime++;
+                        continue;
+                    }
+
+                    // Select highest priority from queue
+                    current = readyQueue.OrderBy(p => p.Priority).ThenBy(p => p.ArrivalTime).First();
+                    readyQueue.Remove(current);
+
+                    if (current.RemainingTime == current.BurstTime)
+                        current.StartTime = currentTime;
+
+                    currentQuantumUsed = 0;
+                }
+
+                int execStart = currentTime;
+                current.RemainingTime--;
+                currentTime++;
+                currentQuantumUsed++;
+
+                // Record step
+                progress.Add(new ProcessSnapshot { Id = current.ID, StartTime = execStart, EndTime = currentTime });
+
+                if (current.RemainingTime == 0)
+                {
+                    current.CompletionTime = currentTime;
+                    current.TurnaroundTime = current.CompletionTime - current.ArrivalTime;
+                    current.WaitingTime = current.TurnaroundTime - current.BurstTime;
+                    current = null;
+                    completedCount++;
+                    currentQuantumUsed = 0;
+                }
+                else if (currentQuantumUsed == quantumTime)
+                {
+                    readyQueue.Add(current);
+                    current = null;
+                    currentQuantumUsed = 0;
+                }
+            }
+
+            return progress;
+        }
+
+
+
     }
 }

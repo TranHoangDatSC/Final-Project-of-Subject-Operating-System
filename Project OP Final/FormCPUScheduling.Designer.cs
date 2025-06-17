@@ -286,9 +286,9 @@
             this.lblSecond.ForeColor = System.Drawing.SystemColors.Info;
             this.lblSecond.Location = new System.Drawing.Point(439, 103);
             this.lblSecond.Name = "lblSecond";
-            this.lblSecond.Size = new System.Drawing.Size(93, 24);
+            this.lblSecond.Size = new System.Drawing.Size(66, 24);
             this.lblSecond.TabIndex = 22;
-            this.lblSecond.Text = "second(s)";
+            this.lblSecond.Text = "unit(s)";
             // 
             // FormCPUScheduling
             // 
