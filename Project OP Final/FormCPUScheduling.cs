@@ -175,7 +175,7 @@ namespace Project_OP_Final
 
             //Step 3: Perform the calculation based on the selected algorithm
             
-            //WITH priority algorithms
+            //NOT with priority algorithms
             if (radWithoutPriority.Checked)
             {
                 switch (comboAlgorithm.SelectedItem.ToString())
@@ -193,7 +193,7 @@ namespace Project_OP_Final
                         break;
                 }
             }
-            //NOT with priority algorithms
+            //WITH priority algorithms
             if (radWithPriority.Checked)
             {
                 switch (comboAlgorithm.SelectedItem.ToString())
@@ -203,14 +203,12 @@ namespace Project_OP_Final
                         ganttChartShow(processes);
                         break;
                     case "(FCFS)First Come First Serve":
-                        //Process.P_FCFSRun(processes);
-                        //ganttChartShow(processes);
-                        informError("Priority FCFS scheduling is not implemented yet.");
+                        Process.PriorityRun(processes); //Về mặt logic, FCFS là PriorityRun với Priority = 0
+                        ganttChartShow(processes);
                         break;
                     case "(SJF) Shortest Job First":
-                        //Process.P_SJFRun(processes);
-                        //ganttChartShow(processes);
-                        informError("Priority SJF scheduling is not implemented yet.");
+                        Process.P_SJFRun(processes);
+                        ganttChartShow(processes);
                         break;
                     default:
                         informError("⚠️Build Failed - Please ensure all data is entered correctly.");
