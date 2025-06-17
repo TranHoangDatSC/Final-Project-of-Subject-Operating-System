@@ -216,6 +216,10 @@ namespace Project_OP_Final
                         Process.P_SJFRun(processes);
                         ganttChartShow(processes);
                         break;
+                    case "(SRTF) Shortest Remaining Time First":
+                        List<ProcessSnapshot> progress = Process.P_SRTFRun(processes);
+                        ganttChartShow(progress);
+                        break;
                     default:
                         informError("⚠️Build Failed - Please ensure all data is entered correctly.");
                         break;

@@ -251,66 +251,6 @@ namespace Project_OP_Final
             public int EndTime { get; set; } // For Gantt chart visualization
         }
 
-        /*
-        public static void SRTFRun(List<Process> processes)
-        {
-
-             //To sum up: To select the process with the shortest remaining time at each second currentTime passes. 
-
-            List<Process> completed = new List<Process>(); //Track completed processes
-            List<Process> progress = new List<Process>(); //Track processes for Gantt Chart
-            List<Process> readyQueue = new List<Process>();
-            int currentTime = 0;
-
-            while (processes.Count > completed.Count)
-            {
-                Process nextProcess = null;
-                readyQueue.Clear();
-                foreach (var p in processes.Except(completed).ToList())
-                {
-                    //Allow the same process to be added into readyQueue again
-                    //as long as Remaining Burst Time is still > 0
-                    if (p.ArrivalTime <= currentTime && p.RemainingTime > 0)
-                        readyQueue.Add(p);
-                }
-
-                if (readyQueue.Count == 0)
-                {
-                    currentTime++;
-                    continue;
-                }
-
-                nextProcess = readyQueue.OrderBy(p => p.RemainingTime).ThenBy(p => p.ArrivalTime).First();
-
-                //After selecting nextProcess for CPU, start updating its properties
-                //Update StartTime many times whenever it was selected as nextProcess until finished excecution
-                nextProcess.StartTime = currentTime; 
-
-                nextProcess.RemainingTime--;
-                readyQueue.Remove(nextProcess); //It can be added back to readyQueue if it still has RemainingTime > 0
-
-                //Amount of time that nextProcess has been executed
-                nextProcess.CompletionTime = nextProcess.StartTime + 1;
-
-                //CompletionTime = BurstTime + StartTime - RemainingTime
-
-                currentTime++;
-
-                if (nextProcess.RemainingTime == 0)
-                {
-                    //Final excecution => calculate TAT, WT only ONCE when process is finished
-                    nextProcess.TurnaroundTime = nextProcess.CompletionTime - nextProcess.ArrivalTime;
-                    nextProcess.WaitingTime = nextProcess.TurnaroundTime - nextProcess.BurstTime;
-                    completed.Add(nextProcess);
-
-                }
-                progress.Add(nextProcess); //To track the working process for Gantt Chart
-            }
-            processes.Clear();
-            processes.AddRange(progress);
-        }
-        */
-
         public static List<ProcessSnapshot> SRTFRun(List<Process> processes)
         {
             List<Process> completed = new List<Process>();              // Finished processes
@@ -321,8 +261,8 @@ namespace Project_OP_Final
             {
                 // Build ready queue for this time unit
                 List<Process> readyQueue = processes
-                    .Where(p => p.ArrivalTime <= currentTime && p.RemainingTime > 0)
-                    .ToList();
+                                           .Where(p => p.ArrivalTime <= currentTime && p.RemainingTime > 0)
+                                           .ToList();
 
                 if (readyQueue.Count == 0)
                 {
@@ -356,7 +296,7 @@ namespace Project_OP_Final
                 nextProcess.RemainingTime--;
                 currentTime++;
 
-                // If process finishes now, calculate its metrics
+                // If process finishes now, calculate its properties
                 if (nextProcess.RemainingTime == 0)
                 {
                     nextProcess.CompletionTime = currentTime;
@@ -365,23 +305,66 @@ namespace Project_OP_Final
                     completed.Add(nextProcess);
                 }
             }
-
-            //foreach (var log in progress)
-            //{
-            //    Console.WriteLine($"[{log.StartTime}-{log.EndTime}] -> {log.Id}");
-            //}
-
-            // Replace original list with completed for further reporting
-            //processes.Clear();
-            //processes.AddRange(progress);
             return progress;
         }
 
 
 
-        public static void P_SRTFRun(List<Process> processes)
+        public static List<ProcessSnapshot> P_SRTFRun(List<Process> processes)
         {
+            List<Process> completed = new List<Process>();              // Finished processes
+            List<ProcessSnapshot> progress = new List<ProcessSnapshot>(); // Gantt Chart log
+            int currentTime = 0;
 
+            while (processes.Count > completed.Count)
+            {
+                // Build ready queue for this time unit
+                List<Process> readyQueue = processes
+                                           .Where(p => p.ArrivalTime <= currentTime && p.RemainingTime > 0)
+                                           .ToList();
+
+                if (readyQueue.Count == 0)
+                {
+                    // CPU is idle
+                    progress.Add(new ProcessSnapshot { Id = "Idle", StartTime = currentTime, EndTime = currentTime + 1 });
+                    currentTime++;
+                    continue;
+                }
+
+                // Select the process with the shortest remaining time
+                Process nextProcess = readyQueue
+                    .OrderBy(p => p.Priority)
+                    .ThenBy(p => p.RemainingTime)
+                    .First();
+
+                // If this is the first time the process is executed, record its start time
+                if (nextProcess.BurstTime == nextProcess.RemainingTime)
+                {
+                    nextProcess.StartTime = currentTime;
+                }
+
+                // Log the execution for this time unit
+                progress.Add(new ProcessSnapshot
+                {
+                    Id = nextProcess.ID,
+                    StartTime = currentTime,
+                    EndTime = currentTime + 1
+                });
+
+                // Execute process for 1 time unit
+                nextProcess.RemainingTime--;
+                currentTime++;
+
+                // If process finishes now, calculate its properties
+                if (nextProcess.RemainingTime == 0)
+                {
+                    nextProcess.CompletionTime = currentTime;
+                    nextProcess.TurnaroundTime = nextProcess.CompletionTime - nextProcess.ArrivalTime;
+                    nextProcess.WaitingTime = nextProcess.TurnaroundTime - nextProcess.BurstTime;
+                    completed.Add(nextProcess);
+                }
+            }
+            return progress;
         }
 
         public static void RRRun(List<Process> processes, int quantumTime)
