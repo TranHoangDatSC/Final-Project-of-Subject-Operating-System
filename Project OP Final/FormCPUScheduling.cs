@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using System.Windows.Forms;
+using static Project_OP_Final.Process;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 /*
@@ -165,6 +166,7 @@ namespace Project_OP_Final
                         BurstTime = burstTime,
                         Priority = priority,
                         StartTime = -1,
+                        RemainingTime = burstTime,
                         CompletionTime = 0,
                         //Initialize TurnaroundTime and WaitingTime to 0
                         TurnaroundTime = 0,
@@ -188,6 +190,10 @@ namespace Project_OP_Final
                         Process.SJFRun(processes);
                         ganttChartShow(processes);
                         break;
+                    case "(SRTF) Shortest Remaining Time First":
+                        List<ProcessSnapshot>  progress  = Process.SRTFRun(processes);
+                        ganttChartShow(progress);
+                        break;
                     default:
                         informError("⚠️Build Failed - Please ensure all data is entered correctly.");
                         break;
@@ -203,7 +209,7 @@ namespace Project_OP_Final
                         ganttChartShow(processes);
                         break;
                     case "(FCFS)First Come First Serve":
-                        Process.PriorityRun(processes); //Về mặt logic, FCFS là PriorityRun với Priority = 0
+                        Process.PriorityRun(processes); //Do về mặt logic, FCFS là PriorityRun với Priority = 0
                         ganttChartShow(processes);
                         break;
                     case "(SJF) Shortest Job First":
@@ -227,7 +233,7 @@ namespace Project_OP_Final
 
             gridAverage.Rows.Clear(); // Clear previous averages
             gridAverage.Rows.Add(avgTAT, avgWT);
-            txtProcessNumber.Text = processes.Count.ToString(); // Update the process count
+            txtProcessNumber.Text = (gridData.RowCount - 1).ToString() ; // Update the process count
 
         }
 
@@ -235,7 +241,7 @@ namespace Project_OP_Final
         {
             try
             {
-                string filePath = Path.Combine(Application.StartupPath, "Data", "Priority_CPU.txt");
+                string filePath = Path.Combine(Application.StartupPath, "Data", "SRTF_CPU.txt");
 
                 // Read all lines
                 string[] lines = File.ReadAllLines(filePath);
@@ -333,7 +339,7 @@ namespace Project_OP_Final
             lblChartSequence.ForeColor = Color.Green;
 
             lblChartSequence.AutoSize = true;
-            lblChartSequence.MaximumSize = new Size(panelGanttChart.Width, panelGanttChart.Height); // Set maximum width to the panel's width
+            lblChartSequence.MaximumSize = new Size(panelGanttChart.Width - 25, panelGanttChart.Height); // Set maximum width to the panel's width
 
 
         }
@@ -373,6 +379,22 @@ namespace Project_OP_Final
             }
             lblChartSequence.Text += "Finish";
 
+        }
+
+        private void ganttChartShow(List<ProcessSnapshot> progress)
+        {
+            // Clear previous gantt chart
+            panelGanttChart.Invalidate(); // Refresh the panel
+            lblChartSequence.Text = ""; // Clear the previous gantt chart sequence
+
+            // Display the gantt chart sequence from the processes
+            lblChartSequence.Text = $"{progress[0].Id} {progress[0].StartTime} --- ";
+            for (int i= 1; i < progress.Count; i++)
+            {
+                lblChartSequence.Text += $"{progress[i].StartTime} {progress[i].Id} --- ";
+                //      (P1) 0 -- 5 (P2) -- 10 (P3) -- 14
+            }
+            lblChartSequence.Text += $"{progress[progress.Count - 1].EndTime}";
         }
 
 

@@ -84,7 +84,7 @@
             this.comboAlgorithm.FormattingEnabled = true;
             this.comboAlgorithm.Location = new System.Drawing.Point(320, 28);
             this.comboAlgorithm.Name = "comboAlgorithm";
-            this.comboAlgorithm.Size = new System.Drawing.Size(310, 29);
+            this.comboAlgorithm.Size = new System.Drawing.Size(320, 29);
             this.comboAlgorithm.TabIndex = 2;
             this.comboAlgorithm.SelectedIndexChanged += new System.EventHandler(this.comboAlgorithm_SelectedIndexChanged);
             // 

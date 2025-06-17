@@ -172,6 +172,9 @@
     <Content Include="Data\Priority_CPU.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\SRTF_CPU.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\mainpic.png" />
     <None Include="Resources\MainPicBG.jpg" />
     <None Include="Resources\opmainpic.jpg" />
