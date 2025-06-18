@@ -1,0 +1,12 @@
+(FCFS)First Come First Serve Implementation File
+
+=== Dữ liệu ===
+Process ID: P1, Arrival Time: 0, Burst Time: 5, Priority: 3
+Process ID: P2, Arrival Time: 1, Burst Time: 4, Priority: 1
+Process ID: P3, Arrival Time: 2, Burst Time: 3, Priority: 4
+Process ID: P4, Arrival Time: 3, Burst Time: 1, Priority: 2
+
+=== Kết Quả ===
+
+=== Trung Bình ===
+7.75: 4.5

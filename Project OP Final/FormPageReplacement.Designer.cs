@@ -55,9 +55,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Project_OP_Final.Properties.Resources.PRIocn;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(25, 8);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 163);
+            this.pictureBox1.Size = new System.Drawing.Size(118, 106);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -65,20 +66,22 @@
             // dgv_Result
             // 
             this.dgv_Result.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Result.Location = new System.Drawing.Point(21, 280);
+            this.dgv_Result.Location = new System.Drawing.Point(14, 182);
+            this.dgv_Result.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgv_Result.Name = "dgv_Result";
             this.dgv_Result.RowHeadersWidth = 62;
             this.dgv_Result.RowTemplate.Height = 28;
-            this.dgv_Result.Size = new System.Drawing.Size(1210, 425);
+            this.dgv_Result.Size = new System.Drawing.Size(807, 276);
             this.dgv_Result.TabIndex = 1;
             // 
             // cb_Algorithm
             // 
             this.cb_Algorithm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_Algorithm.FormattingEnabled = true;
-            this.cb_Algorithm.Location = new System.Drawing.Point(1195, 88);
+            this.cb_Algorithm.Location = new System.Drawing.Point(797, 57);
+            this.cb_Algorithm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cb_Algorithm.Name = "cb_Algorithm";
-            this.cb_Algorithm.Size = new System.Drawing.Size(267, 37);
+            this.cb_Algorithm.Size = new System.Drawing.Size(179, 28);
             this.cb_Algorithm.TabIndex = 2;
             this.cb_Algorithm.SelectedIndexChanged += new System.EventHandler(this.cb_Algorithm_SelectedIndexChanged);
             // 
@@ -87,9 +90,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(765, 50);
+            this.label1.Location = new System.Drawing.Point(510, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 26);
+            this.label1.Size = new System.Drawing.Size(97, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Select Frame";
             // 
@@ -98,9 +102,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(1238, 50);
+            this.label2.Location = new System.Drawing.Point(825, 32);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 26);
+            this.label2.Size = new System.Drawing.Size(128, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Choose Algorithm";
             // 
@@ -109,35 +114,39 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(255, 50);
+            this.label3.Location = new System.Drawing.Point(170, 32);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(306, 26);
+            this.label3.Size = new System.Drawing.Size(201, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Enter Page Reference String";
             // 
             // nud_Frame
             // 
             this.nud_Frame.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nud_Frame.Location = new System.Drawing.Point(726, 88);
+            this.nud_Frame.Location = new System.Drawing.Point(484, 57);
+            this.nud_Frame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nud_Frame.Name = "nud_Frame";
-            this.nud_Frame.Size = new System.Drawing.Size(231, 35);
+            this.nud_Frame.Size = new System.Drawing.Size(154, 26);
             this.nud_Frame.TabIndex = 6;
             // 
             // txt_Page_reference_string
             // 
             this.txt_Page_reference_string.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txt_Page_reference_string.Location = new System.Drawing.Point(233, 90);
+            this.txt_Page_reference_string.Location = new System.Drawing.Point(155, 58);
+            this.txt_Page_reference_string.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt_Page_reference_string.Name = "txt_Page_reference_string";
-            this.txt_Page_reference_string.Size = new System.Drawing.Size(345, 35);
+            this.txt_Page_reference_string.Size = new System.Drawing.Size(231, 26);
             this.txt_Page_reference_string.TabIndex = 7;
             // 
             // btn_Simulation
             // 
             this.btn_Simulation.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_Simulation.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Simulation.Location = new System.Drawing.Point(1296, 213);
+            this.btn_Simulation.Location = new System.Drawing.Point(864, 138);
+            this.btn_Simulation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Simulation.Name = "btn_Simulation";
-            this.btn_Simulation.Size = new System.Drawing.Size(222, 138);
+            this.btn_Simulation.Size = new System.Drawing.Size(148, 90);
             this.btn_Simulation.TabIndex = 8;
             this.btn_Simulation.Text = "Run";
             this.btn_Simulation.UseVisualStyleBackColor = false;
@@ -147,9 +156,10 @@
             // 
             this.btn_Reset.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_Reset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Reset.Location = new System.Drawing.Point(1296, 708);
+            this.btn_Reset.Location = new System.Drawing.Point(864, 460);
+            this.btn_Reset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Reset.Name = "btn_Reset";
-            this.btn_Reset.Size = new System.Drawing.Size(222, 138);
+            this.btn_Reset.Size = new System.Drawing.Size(148, 90);
             this.btn_Reset.TabIndex = 9;
             this.btn_Reset.Text = "Reset";
             this.btn_Reset.UseVisualStyleBackColor = false;
@@ -159,9 +169,10 @@
             // 
             this.btn_SaveFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_SaveFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SaveFile.Location = new System.Drawing.Point(1296, 536);
+            this.btn_SaveFile.Location = new System.Drawing.Point(864, 348);
+            this.btn_SaveFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SaveFile.Name = "btn_SaveFile";
-            this.btn_SaveFile.Size = new System.Drawing.Size(222, 138);
+            this.btn_SaveFile.Size = new System.Drawing.Size(148, 90);
             this.btn_SaveFile.TabIndex = 10;
             this.btn_SaveFile.Text = "Save File";
             this.btn_SaveFile.UseVisualStyleBackColor = false;
@@ -171,9 +182,10 @@
             // 
             this.btn_LoadFromFile.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_LoadFromFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LoadFromFile.Location = new System.Drawing.Point(1296, 371);
+            this.btn_LoadFromFile.Location = new System.Drawing.Point(864, 241);
+            this.btn_LoadFromFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_LoadFromFile.Name = "btn_LoadFromFile";
-            this.btn_LoadFromFile.Size = new System.Drawing.Size(222, 138);
+            this.btn_LoadFromFile.Size = new System.Drawing.Size(148, 90);
             this.btn_LoadFromFile.TabIndex = 11;
             this.btn_LoadFromFile.Text = "Load From File";
             this.btn_LoadFromFile.UseVisualStyleBackColor = false;
@@ -183,18 +195,20 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.Controls.Add(this.lb_Pagefaults);
-            this.panel1.Location = new System.Drawing.Point(21, 724);
+            this.panel1.Location = new System.Drawing.Point(14, 471);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1214, 179);
+            this.panel1.Size = new System.Drawing.Size(809, 116);
             this.panel1.TabIndex = 12;
             // 
             // lb_Pagefaults
             // 
             this.lb_Pagefaults.AutoSize = true;
             this.lb_Pagefaults.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Pagefaults.Location = new System.Drawing.Point(34, 37);
+            this.lb_Pagefaults.Location = new System.Drawing.Point(23, 24);
+            this.lb_Pagefaults.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_Pagefaults.Name = "lb_Pagefaults";
-            this.lb_Pagefaults.Size = new System.Drawing.Size(132, 26);
+            this.lb_Pagefaults.Size = new System.Drawing.Size(87, 19);
             this.lb_Pagefaults.TabIndex = 0;
             this.lb_Pagefaults.Text = "Page Faults";
             // 
@@ -202,27 +216,29 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.labelAlgorithm);
-            this.panel2.Location = new System.Drawing.Point(21, 181);
+            this.panel2.Location = new System.Drawing.Point(14, 118);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1210, 107);
+            this.panel2.Size = new System.Drawing.Size(807, 70);
             this.panel2.TabIndex = 13;
             // 
             // labelAlgorithm
             // 
             this.labelAlgorithm.AutoSize = true;
             this.labelAlgorithm.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAlgorithm.Location = new System.Drawing.Point(507, 41);
+            this.labelAlgorithm.Location = new System.Drawing.Point(338, 27);
+            this.labelAlgorithm.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAlgorithm.Name = "labelAlgorithm";
-            this.labelAlgorithm.Size = new System.Drawing.Size(118, 26);
+            this.labelAlgorithm.Size = new System.Drawing.Size(75, 19);
             this.labelAlgorithm.TabIndex = 0;
             this.labelAlgorithm.Text = "Algorithm";
             // 
             // FormPageReplacement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
-            this.ClientSize = new System.Drawing.Size(1581, 936);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_LoadFromFile);
@@ -238,6 +254,7 @@
             this.Controls.Add(this.dgv_Result);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormPageReplacement";
             this.Text = "FormPageReplacement";
             this.Load += new System.EventHandler(this.FormPageReplacement_Load);

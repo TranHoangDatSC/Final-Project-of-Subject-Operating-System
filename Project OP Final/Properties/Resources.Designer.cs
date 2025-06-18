@@ -73,6 +73,16 @@ namespace Project_OP_Final.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cpu_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("cpu-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DiskSchedulingIcon {
             get {
                 object obj = ResourceManager.GetObject("DiskSchedulingIcon", resourceCulture);

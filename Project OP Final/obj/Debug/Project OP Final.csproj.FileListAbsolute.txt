@@ -1,5 +1,6 @@
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Allocation.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Available.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\FCFS_DiskScheduling.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\MaxDemand.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe.config
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe
@@ -20,4 +21,49 @@ C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project 
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.pdb
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\obj\Debug\Project OP Final.exe.config
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\PageReferenceString.txt
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\DiskScheduling.txt
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\Allocation.txt
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\Available.txt
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\FCFS_DiskScheduling.txt
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\MaxDemand.txt
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\PageReferenceString.txt
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Project OP Final.exe.config
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Project OP Final.exe
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Project OP Final.pdb
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.csproj.AssemblyReference.cache
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.exe.config
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormBankerAlgorithm.resources
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormCPUScheduling.resources
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormDiskScheduling.resources
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormMain.resources
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormPageReplacement.resources
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.Properties.Resources.resources
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.csproj.GenerateResource.cache
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.csproj.CoreCompileInputs.cache
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project .444B2ED4.Up2Date
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.exe
+D:\MS Visual Studio\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.pdb
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\Allocation.txt
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\Available.txt
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\FCFS_DiskScheduling.txt
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\MaxDemand.txt
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\PageReferenceString.txt
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Project OP Final.exe.config
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Project OP Final.exe
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Project OP Final.pdb
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.exe.config
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormBankerAlgorithm.resources
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormCPUScheduling.resources
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormDiskScheduling.resources
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormMain.resources
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.FormPageReplacement.resources
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project_OP_Final.Properties.Resources.resources
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.csproj.GenerateResource.cache
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project .444B2ED4.Up2Date
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.exe
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.pdb
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\Priority_CPU.txt
+D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\SRTF_CPU.txt

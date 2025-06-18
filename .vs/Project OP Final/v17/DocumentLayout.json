@@ -1,38 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\",
+  "WorkspaceRootPath": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|c:\\users\\hoang\\source\\repos\\project op final\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formdiskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formdiskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\microsoft visual studio 2022\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formcpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|c:\\users\\hoang\\source\\repos\\project op final\\project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|d:\\microsoft visual studio 2022\\school-project\\os-hedieuhanh\\final-project-of-subject-operating-system\\project op final\\data\\cpu_filesave.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\data\\cpu_filesave.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|c:\\users\\hoang\\source\\repos\\project op final\\project op final\\class\\bankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\bankeralgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\class\\diskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\diskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formpagereplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\project op final\\formdiskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\formdiskscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\project op final\\class\\cpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42AC2A14-485B-4E45-948A-DFC7694C3AF9}|Project OP Final\\Project OP Final.csproj|solutionrelative:project op final\\class\\cpuscheduling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,101 +39,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormMain.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormMain.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs",
-              "RelativeToolTip": "Project OP Final\\FormMain.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T02:16:52.691Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BankerAlgorithm.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Class\\BankerAlgorithm.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\Class\\BankerAlgorithm.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Class\\BankerAlgorithm.cs",
-              "RelativeToolTip": "Project OP Final\\Class\\BankerAlgorithm.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA7wAoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T02:16:16.495Z",
+              "Title": "CPU_FileSave.txt",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Data\\CPU_FileSave.txt",
+              "RelativeDocumentMoniker": "Project OP Final\\Data\\CPU_FileSave.txt",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Data\\CPU_FileSave.txt",
+              "RelativeToolTip": "Project OP Final\\Data\\CPU_FileSave.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-06-17T20:24:39.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FormMain.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormMain.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormMain.cs [Design]",
-              "RelativeToolTip": "Project OP Final\\FormMain.cs [Design]",
+              "Title": "CPUScheduling.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\Class\\CPUScheduling.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\Class\\CPUScheduling.cs",
+              "RelativeToolTip": "Project OP Final\\Class\\CPUScheduling.cs",
+              "ViewState": "AgIAAIYBAAAAAAAAAAAywMIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T15:43:50.178Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-12T10:05:20.482Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormPageReplacement.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormPageReplacement.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormPageReplacement.cs",
-              "RelativeToolTip": "Project OP Final\\FormPageReplacement.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAgwEMAAAAbAAAAAAAAAA==",
+              "Title": "FormCPUScheduling.cs",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
+              "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs",
+              "ViewState": "AgIAAE4BAAAAAAAAAAAQwF4BAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T20:54:34.568Z",
+              "WhenOpened": "2025-05-27T06:02:02.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FormDiskScheduling.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormDiskScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormDiskScheduling.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormDiskScheduling.cs",
-              "RelativeToolTip": "Project OP Final\\FormDiskScheduling.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAAkwEkAAABMAAAAAAAAAA==",
+              "Title": "FormCPUScheduling.cs [Design]",
+              "DocumentMoniker": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs",
+              "RelativeDocumentMoniker": "Project OP Final\\FormCPUScheduling.cs",
+              "ToolTip": "D:\\Microsoft Visual Studio 2022\\School-Project\\OS-HeDieuHanh\\Final-Project-of-Subject-Operating-System\\Project OP Final\\FormCPUScheduling.cs [Design]",
+              "RelativeToolTip": "Project OP Final\\FormCPUScheduling.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T15:39:24.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FormDiskScheduling.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormDiskScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormDiskScheduling.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormDiskScheduling.cs [Design]",
-              "RelativeToolTip": "Project OP Final\\FormDiskScheduling.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T20:51:35.063Z",
+              "WhenOpened": "2025-05-25T12:33:17.782Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DiskScheduling.cs",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Class\\DiskScheduling.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\Class\\DiskScheduling.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\Class\\DiskScheduling.cs",
-              "RelativeToolTip": "Project OP Final\\Class\\DiskScheduling.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAqwHIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T20:51:30.462Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FormPageReplacement.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormPageReplacement.cs",
-              "RelativeDocumentMoniker": "Project OP Final\\FormPageReplacement.cs",
-              "ToolTip": "C:\\Users\\hoang\\Source\\Repos\\Project OP Final\\Project OP Final\\FormPageReplacement.cs [Design]",
-              "RelativeToolTip": "Project OP Final\\FormPageReplacement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-24T20:53:00.408Z"
             }
           ]
         }
