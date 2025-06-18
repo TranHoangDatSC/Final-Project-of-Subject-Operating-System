@@ -246,7 +246,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(958, 556);
+            this.label5.Location = new System.Drawing.Point(958, 523);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 26);
             this.label5.TabIndex = 21;
@@ -255,7 +255,7 @@
             // txtTotalHeadMovement
             // 
             this.txtTotalHeadMovement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTotalHeadMovement.Location = new System.Drawing.Point(1221, 551);
+            this.txtTotalHeadMovement.Location = new System.Drawing.Point(1221, 518);
             this.txtTotalHeadMovement.Name = "txtTotalHeadMovement";
             this.txtTotalHeadMovement.Size = new System.Drawing.Size(322, 35);
             this.txtTotalHeadMovement.TabIndex = 22;
@@ -264,9 +264,9 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.labelSteps);
-            this.panel2.Location = new System.Drawing.Point(963, 609);
+            this.panel2.Location = new System.Drawing.Point(963, 559);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(591, 301);
+            this.panel2.Size = new System.Drawing.Size(591, 351);
             this.panel2.TabIndex = 23;
             // 
             // labelSteps

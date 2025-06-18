@@ -68,7 +68,7 @@ namespace Project_OP_Final
 
             for(int i = 0; i < cols; i++)
             {
-                grid.Columns.Add($"Resource{i}", $"Resource{i}");
+                grid.Columns.Add($"Resource {i}", $"Resource {i}");
             }
 
             grid.Rows.Add(rows);
@@ -89,19 +89,21 @@ namespace Project_OP_Final
                 {
                     AutoSize = true,
                     FlowDirection = FlowDirection.LeftToRight,
-                    Margin = new Padding(5)
+                    Margin = new Padding(0),
+                    Padding = new Padding(0)
                 };
                 var lbl = new Label
                 {
                     AutoSize = true,
-                    TextAlign = ContentAlignment.MiddleLeft
+                    TextAlign = ContentAlignment.MiddleLeft,
+                    Margin = new Padding(0, 0, 0, 0)
                 };
 
                 var nud = new NumericUpDown
                 {
                     Minimum = 0,
-                    Maximum = 1000,
-                    Width = 193,
+                    Maximum = 232,
+                    Width = 232,
                     Height = 35
                 };
 
@@ -136,10 +138,12 @@ namespace Project_OP_Final
         {
             labelStatus.Text = "";
             labelSequence.Text = "";
+            labelSuggest.Text = "";
         }
 
         private void btnRequestResource_Click(object sender, EventArgs e)
         {
+            labelSuggest.Text = "";
             if (banker == null)
             {
                 MessageBox.Show("⚠️ Please load data before making a resource request.",
@@ -151,14 +155,6 @@ namespace Project_OP_Final
 
             int processIndex = cbProcessRequest.SelectedIndex;
             int[] request = nudRequests.Select(n => (int)n.Value).ToArray();
-
-            // Kiểm tra nếu người dùng không nhập gì (toàn 0)
-            //if (request.All(v => v == 0))
-            //{
-            //    MessageBox.Show("⚠️ Please enter at least one resource to request.",
-            //                    "Missing Request Data", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
 
             try
             {
@@ -176,11 +172,19 @@ namespace Project_OP_Final
             {
                 labelStatus.Text = "✔ Request granted. System is still in a safe state";
                 labelStatus.ForeColor = Color.Green;
+                labelSuggest.Text = "";
             }
             else
             {
                 labelStatus.Text = "❌ Request denied. System would be unsafe.";
                 labelStatus.ForeColor = Color.Red;
+                labelStatus.Text += Environment.NewLine +
+                $"Needed: {string.Join(", ", request)}. Available: {string.Join(", ", banker.Available)}.";
+
+                labelSuggest.Text += Environment.NewLine + "Possible solutions:" + Environment.NewLine;
+                labelSuggest.Text += $"- Release resources from other process(es) (for example, consider freeing P{processIndex})." + Environment.NewLine;
+                labelSuggest.Text += $"- Wait until resources become available." + Environment.NewLine;
+                labelSuggest.Text += $"- Roll back or terminate P{processIndex} to avoid deadlock.";
             }
 
             ShowNeed();
@@ -208,6 +212,7 @@ namespace Project_OP_Final
             cbProcessRequest.Items.Clear();
             labelStatus.Text = "";
             labelSequence.Text = "";
+            labelSuggest.Text = "";
         }
 
         private void btnCheckSafe_Click(object sender, EventArgs e)
@@ -246,11 +251,13 @@ namespace Project_OP_Final
                 {
                     labelStatus.Text = "⛔ DEADLOCK detected! All processes are blocked.";
                     labelStatus.ForeColor = Color.DarkRed;
+                    labelSuggest.Text = banker.SuggestDeadlockSolution();
                 }
                 else
                 {
                     labelStatus.Text = "❌ The system is in an unsafe state (but no deadlock has occurred).";
                     labelStatus.ForeColor = Color.OrangeRed;
+                    labelSuggest.Text = "";
                 }
 
                 labelSequence.Text = safeSequence.Count > 0

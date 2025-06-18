@@ -118,5 +118,61 @@ namespace Project_OP_Final.Class
             Allocation = new int[ProcessCount, ResourceCount];
             Available = new int[ResourceCount];
         }
+        public string SuggestDeadlockSolution()
+        {
+            List<int> unfinished = new List<int>();
+
+            bool[] finish = new bool[ProcessCount];
+            int[] work = (int[])Available.Clone();
+
+            bool changed;
+
+            do
+            {
+                changed = false;
+
+                for (int i = 0; i < ProcessCount; i++)
+                {
+                    if (!finish[i])
+                    {
+                        bool canAllocate = true;
+
+                        for (int j = 0; j < ResourceCount; j++)
+                        {
+                            if (Need[i, j] > work[j])
+                            {
+                                canAllocate = false;
+                                break;
+                            }
+                        }
+
+                        if (canAllocate)
+                        {
+                            for (int j = 0; j < ResourceCount; j++)
+                                work[j] += Allocation[i, j];
+                            finish[i] = true;
+                            changed = true;
+                        }
+                    }
+                }
+            } while (changed);
+
+            for (int i = 0; i < ProcessCount; i++)
+                if (!finish[i]) unfinished.Add(i);
+
+            if (unfinished.Count == 0)
+                return "No deadlock to solve.";
+
+            var solution = new StringBuilder();
+
+            solution.AppendLine($"Deadlock involves process(es): {string.Join(", ", unfinished.Select(id => $"P{id}"))}.");
+
+            foreach (int p in unfinished)
+            {
+                solution.AppendLine($"- P{p} is waiting. Currently allocated: {string.Join(", ", Enumerable.Range(0, ResourceCount).Select(r => Allocation[p, r]))}. Needed: {string.Join(", ", Enumerable.Range(0, ResourceCount).Select(r => Need[p, r]))}.Consider terminating P{p} or freeing its resources.");
+            }
+
+            return solution.ToString();
+        }
     }
 }

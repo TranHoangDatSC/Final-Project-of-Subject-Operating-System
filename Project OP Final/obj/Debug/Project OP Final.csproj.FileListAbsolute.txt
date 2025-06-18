@@ -1,6 +1,5 @@
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Allocation.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Available.txt
-C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\FCFS_DiskScheduling.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\MaxDemand.txt
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe.config
 C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Project OP Final.exe
@@ -67,3 +66,6 @@ D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Su
 D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\obj\Debug\Project OP Final.pdb
 D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\Priority_CPU.txt
 D:\Microsoft Visual Studio 2022\School-Project\OS-HeDieuHanh\Final-Project-of-Subject-Operating-System\Project OP Final\bin\Debug\Data\SRTF_CPU.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\Priority_CPU.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\SRTF_CPU.txt
+C:\Users\hoang\Source\Repos\Project OP Final\Project OP Final\bin\Debug\Data\DiskScheduling.txt

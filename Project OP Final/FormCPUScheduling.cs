@@ -40,7 +40,7 @@ namespace Project_OP_Final
             comboAlgorithm.Items.Add("(SJF) Shortest Job First");
             comboAlgorithm.Items.Add("(SRTF) Shortest Remaining Time First");
             comboAlgorithm.Items.Add("(RR) Round Robin"); //+ Quantum Time
-
+            lblChartSequence.Text = "";
             defaultUI();
             radWithoutPriority.Enabled = true;
             radWithPriority.Enabled = true;

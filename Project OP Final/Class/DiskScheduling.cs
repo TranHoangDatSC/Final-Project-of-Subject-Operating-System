@@ -41,62 +41,41 @@ namespace Project_OP_Final.Class
         }
         public static int SCAN(int[] requests, int head, int diskSize, Direction direction, out List<(int from, int to, int move)> steps)
         {
-            steps = new List<(int, int, int)>();
-            List<int> req = requests.ToList();
-            req.Add(head);
+            steps = new List<(int from, int to, int move)>();
+            List<int> req = requests.Distinct().ToList();
+
             req.Sort();
+
+            List<int> left = req.Where(r => r < head).OrderByDescending(r => r).ToList();
+            List<int> right = req.Where(r => r >= head).OrderBy(r => r).ToList();
+
             int total = 0;
-            int index = req.IndexOf(head);
+            int current = head;
 
-            if (direction == Direction.Right)
+            foreach (int r in right)
             {
-                for (int i = index + 1; i < req.Count; i++)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
-
-                if (head != diskSize - 1)
-                {
-                    steps.Add((head, diskSize - 1, diskSize - 1 - head));
-                    total += diskSize - 1 - head;
-                    head = diskSize - 1;
-                }
-
-                for (int i = index - 1; i >= 0; i--)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
+                int move = Math.Abs(current - r);
+                steps.Add((current, r, move));
+                total += move;
+                current = r;
             }
-            else // Left
+
+            // Đi đến rìa phải (diskSize - 1)
+            if (current < diskSize - 1)
             {
-                for (int i = index - 1; i >= 0; i--)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
+                int move = diskSize - 1 - current;
+                steps.Add((current, diskSize - 1, move));
+                total += move;
+                current = diskSize - 1;
+            }
 
-                if (head != 0)
-                {
-                    steps.Add((head, 0, head));
-                    total += head;
-                    head = 0;
-                }
-
-                for (int i = index + 1; i < req.Count; i++)
-                {
-                    int move = Math.Abs(head - req[i]);
-                    steps.Add((head, req[i], move));
-                    total += move;
-                    head = req[i];
-                }
+            // Quay lại, xử lý bên trái
+            foreach (int r in left)
+            {
+                int move = Math.Abs(current - r);
+                steps.Add((current, r, move));
+                total += move;
+                current = r;
             }
 
             return total;
