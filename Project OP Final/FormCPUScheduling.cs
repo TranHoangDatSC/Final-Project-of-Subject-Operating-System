@@ -286,7 +286,15 @@ namespace Project_OP_Final
                         gridData.Rows.Add($"P{++processCount}", arrival, burst, prio);
                     }
                 }
-
+                if (radWithoutPriority.Checked)
+                {
+                    //Hide the Priority column 
+                    gridData.Columns["Priority"].Visible = false;
+                }
+                else
+                {
+                    gridData.Columns["Priority"].Visible = true;
+                }
                 inform("Load file successfully"); // Inform the user that the file has been loaded successfully
             }
             catch (Exception ex)
