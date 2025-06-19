@@ -68,25 +68,25 @@ namespace Project_OP_Final
                 case "OPT":
                     pr.OPTAlgorithmRun();
                     lb_Pagefaults.Text = $"Page faults: {pr.faults}";
-                    ShowFrameStates(pr.frameStates, pr.pageFaults);
+                    ShowFrameStates(pr.frameStates, pr.pageFaults, reference);
                     labelAlgorithm.Text = "Algorithm: Optimal (OPT)";
                     break;
                 case "LRU":
                     pr.LRUAlgorithmRun();
                     lb_Pagefaults.Text = $"Page faults: {pr.faults}";
-                    ShowFrameStates(pr.frameStates, pr.pageFaults);
+                    ShowFrameStates(pr.frameStates, pr.pageFaults, reference);
                     labelAlgorithm.Text = "Algorithm: Least Recently Used (LRU)";
                     break;
                 case "FIFO":
                     pr.FIFOAlgorithmRun();
                     lb_Pagefaults.Text = $"Page faults: {pr.faults}";
-                    ShowFrameStates(pr.frameStates, pr.pageFaults);
+                    ShowFrameStates(pr.frameStates, pr.pageFaults, reference);
                     labelAlgorithm.Text = "Algorithm: First-In First-Out (FIFO)";
                     break;
                 case "Clock":
                     pr.ClockAlgorithmRun();
                     lb_Pagefaults.Text = $"Page faults: {pr.faults}";
-                    ShowFrameStates(pr.frameStates, pr.pageFaults, pr.bitsStates);
+                    ShowFrameStates(pr.frameStates, pr.pageFaults, pr.bitsStates, reference);
                     labelAlgorithm.Text = "Algorithm: Clock Replacement";
                     break;
                 default:
@@ -95,7 +95,7 @@ namespace Project_OP_Final
             }
             lb_Pagefaults.Text = $"Page faults: {pr.faults}";
         }
-        private void ShowFrameStates(List<List<int>> frameStates, List<bool> pageFaults)
+        private void ShowFrameStates(List<List<int>> frameStates, List<bool> pageFaults, List<int> pageReferences)
         {
             dgv_Result.Columns.Clear();
             dgv_Result.Rows.Clear();
@@ -109,7 +109,7 @@ namespace Project_OP_Final
             // Thêm cột
             for (int i = 0; i < soCot; i++)
             {
-                dgv_Result.Columns.Add($"Frame{i}", $"Column {i + 1}");
+                dgv_Result.Columns.Add($"Frame{i}", pageReferences[i].ToString());
             }
 
             // Thêm từng dòng (theo chỉ số phần tử)
@@ -134,7 +134,7 @@ namespace Project_OP_Final
             }
             dgv_Result.Rows.Add(faultRow);
         }
-        private void ShowFrameStates(List<List<int>> frameStates, List<bool> pageFaults, List<List<bool>> bitsStates)
+        private void ShowFrameStates(List<List<int>> frameStates, List<bool> pageFaults, List<List<bool>> bitsStates, List<int> pageReferences)
         {
             dgv_Result.Columns.Clear();
             dgv_Result.Rows.Clear();
@@ -148,7 +148,7 @@ namespace Project_OP_Final
             // Thêm cột
             for (int i = 0; i < soCot; i++)
             {
-                dgv_Result.Columns.Add($"Frame{i}", $"Column {i + 1}");
+                dgv_Result.Columns.Add($"Frame{i}", pageReferences[i].ToString());
             }
 
             // Thêm từng dòng (theo chỉ số phần tử)
