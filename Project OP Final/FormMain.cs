@@ -16,7 +16,7 @@ namespace Project_OP_Final
         public FormMain()
         {
             InitializeComponent();
-            this.Text = "Visualization Operating System Algorithm";
+            this.Text = "Operating System Algorithms Simulator";
         }
 
         private Form FormChild;
