@@ -32,6 +32,8 @@ namespace Project_OP_Final
             InitializeAlgorithmComboBox();
             SetupDataGridView();
             UpdateDiskSizeTextBoxState();
+            radRight.Visible = false;
+            radLeft.Visible = false;
             //labelAlgorithms.Visible = false;
             //labelSteps.Visible = false;
             //labelSteps.ForeColor = Color.MediumBlue;
@@ -74,11 +76,17 @@ namespace Project_OP_Final
             if (selectedAlgorithm == "SCAN" || selectedAlgorithm == "C-SCAN")
             {
                 txtDiskSize.Enabled = true;
+                radLeft.Visible = true;
+                radRight.Visible = true;
+                radRight.Checked = true;
+                radLeft.Checked = false;
             }
             else
             {
                 txtDiskSize.Enabled = false;
                 txtDiskSize.Text = "";
+                radLeft.Visible = false;
+                radRight.Visible = false;
             }
         }
 
@@ -127,7 +135,7 @@ namespace Project_OP_Final
                     }
                 }
 
-                List<(int from, int to, int move)> steps;
+                List<(int from, int to, int move)> steps = new List<(int from, int to, int move)>(); ;
                 int total = 0;
 
                 switch (selectedAlgorithm)
@@ -139,10 +147,28 @@ namespace Project_OP_Final
                         total = DiskScheduling.SSTF(requests, head, out steps);
                         break;
                     case "SCAN":
-                        total = DiskScheduling.SCAN(requests, head, diskSize, Direction.Left, out steps);
+                        if (radRight.Checked == true)
+                        {
+                            radLeft.Checked = false;
+                            total = DiskScheduling.SCAN_RIGHT(requests, head, diskSize, Direction.Left, out steps);
+                        }
+                        else if (radLeft.Checked == true)
+                        {
+                            radRight.Checked = false;
+                            total = DiskScheduling.SCAN_LEFT(requests, head, diskSize, Direction.Left, out steps);
+                        }
                         break;
                     case "C-SCAN":
-                        total = DiskScheduling.CSCAN(requests, head, diskSize, out steps);
+                        if (radRight.Checked == true)
+                        {
+                            radLeft.Checked = false;
+                            total = DiskScheduling.CSCAN_RIGHT(requests, head, diskSize, out steps);
+                        }
+                        else if (radLeft.Checked == true)
+                        {
+                            radRight.Checked = false;
+                            total = DiskScheduling.CSCAN_LEFT(requests, head, diskSize, out steps);
+                        }
                         break;
                     case "LOOK":
                         total = DiskScheduling.LOOK(requests, head, Direction.Left, out steps);
@@ -261,6 +287,32 @@ namespace Project_OP_Final
             txtTotalHeadMovement.Clear();
             dgvAlgorithm.Rows.Clear();
             labelSteps.Visible = false;
+        }
+
+        private void radRight_CheckedChanged(object sender, EventArgs e)
+        {
+            bool showDirection = selectedAlgorithm == "SCAN" || selectedAlgorithm == "C-SCAN";
+            radLeft.Visible = showDirection;
+            radRight.Visible = showDirection;
+
+            if (!showDirection)
+            {
+                radLeft.Checked = false;
+                radRight.Checked = false;
+            }
+        }
+
+        private void radLeft_CheckedChanged(object sender, EventArgs e)
+        {
+            bool showDirection = selectedAlgorithm == "SCAN" || selectedAlgorithm == "C-SCAN";
+            radLeft.Visible = showDirection;
+            radRight.Visible = showDirection;
+
+            if (!showDirection)
+            {
+                radLeft.Checked = false;
+                radRight.Checked = false;
+            }
         }
     }
 }

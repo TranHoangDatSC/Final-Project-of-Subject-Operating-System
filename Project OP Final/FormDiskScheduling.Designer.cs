@@ -53,6 +53,8 @@
             this.labelSteps = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelAlgorithms = new System.Windows.Forms.Label();
+            this.radRight = new System.Windows.Forms.RadioButton();
+            this.radLeft = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlgorithm)).BeginInit();
@@ -246,7 +248,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(958, 523);
+            this.label5.Location = new System.Drawing.Point(958, 504);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(239, 26);
             this.label5.TabIndex = 21;
@@ -255,7 +257,7 @@
             // txtTotalHeadMovement
             // 
             this.txtTotalHeadMovement.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtTotalHeadMovement.Location = new System.Drawing.Point(1221, 518);
+            this.txtTotalHeadMovement.Location = new System.Drawing.Point(1203, 499);
             this.txtTotalHeadMovement.Name = "txtTotalHeadMovement";
             this.txtTotalHeadMovement.Size = new System.Drawing.Size(322, 35);
             this.txtTotalHeadMovement.TabIndex = 22;
@@ -299,12 +301,42 @@
             this.labelAlgorithms.TabIndex = 24;
             this.labelAlgorithms.Text = "First-Come, First-Served (FCFS)";
             // 
+            // radRight
+            // 
+            this.radRight.AutoSize = true;
+            this.radRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radRight.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radRight.Location = new System.Drawing.Point(1425, 353);
+            this.radRight.Name = "radRight";
+            this.radRight.Size = new System.Drawing.Size(86, 29);
+            this.radRight.TabIndex = 25;
+            this.radRight.TabStop = true;
+            this.radRight.Text = "Right";
+            this.radRight.UseVisualStyleBackColor = true;
+            this.radRight.CheckedChanged += new System.EventHandler(this.radRight_CheckedChanged);
+            // 
+            // radLeft
+            // 
+            this.radLeft.AutoSize = true;
+            this.radLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLeft.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.radLeft.Location = new System.Drawing.Point(1425, 407);
+            this.radLeft.Name = "radLeft";
+            this.radLeft.Size = new System.Drawing.Size(73, 29);
+            this.radLeft.TabIndex = 27;
+            this.radLeft.TabStop = true;
+            this.radLeft.Text = "Left";
+            this.radLeft.UseVisualStyleBackColor = true;
+            this.radLeft.CheckedChanged += new System.EventHandler(this.radLeft_CheckedChanged);
+            // 
             // FormDiskScheduling
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(1581, 936);
+            this.Controls.Add(this.radLeft);
+            this.Controls.Add(this.radRight);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtTotalHeadMovement);
@@ -364,5 +396,7 @@
         private System.Windows.Forms.Label labelSteps;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label labelAlgorithms;
+        private System.Windows.Forms.RadioButton radRight;
+        private System.Windows.Forms.RadioButton radLeft;
     }
 }

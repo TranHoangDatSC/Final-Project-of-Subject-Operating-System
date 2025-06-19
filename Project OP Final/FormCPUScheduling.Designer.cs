@@ -130,7 +130,7 @@
             // txtProcessNumber
             // 
             this.txtProcessNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProcessNumber.Location = new System.Drawing.Point(1204, 19);
+            this.txtProcessNumber.Location = new System.Drawing.Point(1211, 17);
             this.txtProcessNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtProcessNumber.MaxLength = 10;
             this.txtProcessNumber.Name = "txtProcessNumber";
@@ -144,7 +144,7 @@
             this.btnRun.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRun.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRun.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnRun.Location = new System.Drawing.Point(1354, 129);
+            this.btnRun.Location = new System.Drawing.Point(1354, 209);
             this.btnRun.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnRun.Name = "btnRun";
             this.btnRun.Size = new System.Drawing.Size(214, 125);
@@ -157,7 +157,7 @@
             // 
             this.btnLoadFromFile.BackColor = System.Drawing.SystemColors.Info;
             this.btnLoadFromFile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadFromFile.Location = new System.Drawing.Point(1354, 264);
+            this.btnLoadFromFile.Location = new System.Drawing.Point(1354, 363);
             this.btnLoadFromFile.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLoadFromFile.Name = "btnLoadFromFile";
             this.btnLoadFromFile.Size = new System.Drawing.Size(214, 128);
@@ -170,7 +170,7 @@
             // 
             this.btnSaveData.BackColor = System.Drawing.SystemColors.Info;
             this.btnSaveData.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveData.Location = new System.Drawing.Point(1354, 402);
+            this.btnSaveData.Location = new System.Drawing.Point(1354, 527);
             this.btnSaveData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveData.Name = "btnSaveData";
             this.btnSaveData.Size = new System.Drawing.Size(214, 125);
@@ -183,7 +183,7 @@
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.Info;
             this.btnReset.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(1354, 537);
+            this.btnReset.Location = new System.Drawing.Point(1354, 687);
             this.btnReset.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(214, 128);
@@ -231,12 +231,12 @@
             // 
             this.gridAverage.BackgroundColor = System.Drawing.Color.Linen;
             this.gridAverage.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridAverage.Location = new System.Drawing.Point(910, 716);
+            this.gridAverage.Location = new System.Drawing.Point(906, 716);
             this.gridAverage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gridAverage.Name = "gridAverage";
             this.gridAverage.ReadOnly = true;
             this.gridAverage.RowHeadersWidth = 62;
-            this.gridAverage.Size = new System.Drawing.Size(658, 197);
+            this.gridAverage.Size = new System.Drawing.Size(436, 197);
             this.gridAverage.TabIndex = 15;
             // 
             // lblPriority
@@ -244,7 +244,7 @@
             this.lblPriority.AutoSize = true;
             this.lblPriority.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblPriority.Location = new System.Drawing.Point(903, 83);
+            this.lblPriority.Location = new System.Drawing.Point(912, 83);
             this.lblPriority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPriority.Name = "lblPriority";
             this.lblPriority.Size = new System.Drawing.Size(138, 41);
@@ -257,7 +257,7 @@
             this.radWithoutPriority.Checked = true;
             this.radWithoutPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radWithoutPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.radWithoutPriority.Location = new System.Drawing.Point(1060, 83);
+            this.radWithoutPriority.Location = new System.Drawing.Point(1118, 83);
             this.radWithoutPriority.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radWithoutPriority.Name = "radWithoutPriority";
             this.radWithoutPriority.Size = new System.Drawing.Size(235, 37);
@@ -271,7 +271,7 @@
             this.radWithPriority.AutoSize = true;
             this.radWithPriority.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radWithPriority.ForeColor = System.Drawing.SystemColors.Info;
-            this.radWithPriority.Location = new System.Drawing.Point(1060, 150);
+            this.radWithPriority.Location = new System.Drawing.Point(1118, 143);
             this.radWithPriority.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radWithPriority.Name = "radWithPriority";
             this.radWithPriority.Size = new System.Drawing.Size(196, 37);

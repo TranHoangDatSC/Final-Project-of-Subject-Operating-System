@@ -39,7 +39,7 @@ namespace Project_OP_Final.Class
             }
             return total;
         }
-        public static int SCAN(int[] requests, int head, int diskSize, Direction direction, out List<(int from, int to, int move)> steps)
+        public static int SCAN_RIGHT(int[] requests, int head, int diskSize, Direction direction, out List<(int from, int to, int move)> steps)
         {
             steps = new List<(int from, int to, int move)>();
             List<int> req = requests.Distinct().ToList();
@@ -80,7 +80,7 @@ namespace Project_OP_Final.Class
 
             return total;
         }
-        public static int CSCAN(int[] requests, int head, int diskSize, out List<(int from, int to, int move)> steps)
+        public static int CSCAN_RIGHT(int[] requests, int head, int diskSize, out List<(int from, int to, int move)> steps)
         {
             steps = new List<(int, int, int)>();
             List<int> req = requests.ToList();
@@ -107,6 +107,89 @@ namespace Project_OP_Final.Class
             }
 
             for (int i = 0; i < index; i++)
+            {
+                int move = Math.Abs(head - req[i]);
+                steps.Add((head, req[i], move));
+                total += move;
+                head = req[i];
+            }
+
+            return total;
+        }
+        public static int SCAN_LEFT(int[] requests, int head, int diskSize, Direction direction, out List<(int from, int to, int move)> steps)
+        {
+            steps = new List<(int from, int to, int move)>();
+            List<int> req = requests.Distinct().ToList();
+
+            req.Sort();
+
+            List<int> left = req.Where(r => r <= head).OrderByDescending(r => r).ToList(); // bên trái & tại head
+            List<int> right = req.Where(r => r > head).OrderBy(r => r).ToList();           // bên phải
+
+            int total = 0;
+            int current = head;
+
+            // Đi trái
+            foreach (int r in left)
+            {
+                int move = Math.Abs(current - r);
+                steps.Add((current, r, move));
+                total += move;
+                current = r;
+            }
+
+            // Đi đến rìa trái (0)
+            if (current > 0)
+            {
+                int move = current;
+                steps.Add((current, 0, move));
+                total += move;
+                current = 0;
+            }
+
+            // Quay ngược lại, xử lý bên phải
+            foreach (int r in right)
+            {
+                int move = Math.Abs(current - r);
+                steps.Add((current, r, move));
+                total += move;
+                current = r;
+            }
+
+            return total;
+        }
+        public static int CSCAN_LEFT(int[] requests, int head, int diskSize, out List<(int from, int to, int move)> steps)
+        {
+            steps = new List<(int from, int to, int move)>();
+            List<int> req = requests.ToList();
+            req.Add(head);
+            req.Sort();
+
+            int total = 0;
+            int index = req.IndexOf(head);
+
+            // Đi ngược về trái (giảm dần)
+            for (int i = index - 1; i >= 0; i--)
+            {
+                int move = Math.Abs(head - req[i]);
+                steps.Add((head, req[i], move));
+                total += move;
+                head = req[i];
+            }
+
+            if (head != 0)
+            {
+                steps.Add((head, 0, head));        // về rìa trái
+                total += head;
+
+                steps.Add((0, diskSize - 1, diskSize - 1)); // quay vòng về phải
+                total += diskSize - 1;
+
+                head = diskSize - 1;
+            }
+
+            // Xử lý các request bên phải
+            for (int i = req.Count - 1; i > index; i--)
             {
                 int move = Math.Abs(head - req[i]);
                 steps.Add((head, req[i], move));
